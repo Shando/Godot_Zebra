@@ -1,0 +1,4647 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://Scripts/valign.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/fourxfour.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/NotoSansBold36.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Fonts/NotoSansBold18.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Fonts/NotoSansBold12.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Fonts/NotoSansBold24.tres" type="DynamicFont" id=6]
+
+[sub_resource type="StyleBoxFlat" id=18]
+
+[sub_resource type="RichTextEffect" id=17]
+script = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=21]
+
+[sub_resource type="StyleBoxFlat" id=22]
+
+[sub_resource type="RichTextEffect" id=3]
+script = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=19]
+
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 1, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=23]
+
+[sub_resource type="StyleBoxFlat" id=8]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.0627451, 0.0352941, 0.6, 1 )
+
+[sub_resource type="StyleBoxLine" id=9]
+vertical = true
+
+[sub_resource type="RichTextEffect" id=24]
+script = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 1, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.0627451, 0.0352941, 0.6, 1 )
+
+[sub_resource type="StyleBoxLine" id=2]
+vertical = true
+
+[sub_resource type="StyleBoxFlat" id=10]
+
+[sub_resource type="RichTextEffect" id=11]
+script = ExtResource( 1 )
+
+[sub_resource type="StyleBoxLine" id=12]
+
+[sub_resource type="RichTextEffect" id=13]
+script = ExtResource( 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer"]
+margin_right = 178.0
+margin_bottom = 1050.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 1050.0
+
+[node name="Panel" type="Panel" parent="HBoxContainer/HBoxContainer/VBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 18 )
+
+[node name="TopLabel" type="RichTextLabel" parent="HBoxContainer/HBoxContainer/VBoxContainer/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+bbcode_enabled = true
+custom_effects = [ SubResource( 17 ) ]
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 28.0
+margin_right = 24.0
+margin_bottom = 208.0
+rect_min_size = Vector2( 24, 180 )
+custom_styles/panel = SubResource( 21 )
+
+[node name="Panel" type="Panel" parent="HBoxContainer/HBoxContainer/VBoxContainer/PanelContainer"]
+margin_right = 24.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 24, 100 )
+custom_styles/panel = SubResource( 22 )
+
+[node name="SideLabel" type="RichTextLabel" parent="HBoxContainer/HBoxContainer/VBoxContainer/PanelContainer/Panel"]
+anchor_top = 1.1
+anchor_bottom = 1.25
+margin_left = 2.0
+margin_top = -12.0
+margin_right = 152.0
+rect_min_size = Vector2( 100, 24 )
+rect_rotation = -90.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+custom_effects = [ SubResource( 3 ) ]
+
+[node name="Label6" type="Label" parent="HBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 212.0
+margin_right = 24.0
+margin_bottom = 213.0
+custom_fonts/font = SubResource( 19 )
+custom_styles/normal = SubResource( 20 )
+
+[node name="PanelContainer2" type="PanelContainer" parent="HBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 217.0
+margin_right = 24.0
+margin_bottom = 333.0
+rect_min_size = Vector2( 24, 116 )
+custom_styles/panel = SubResource( 21 )
+
+[node name="Panel" type="Panel" parent="HBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2"]
+margin_right = 24.0
+margin_bottom = 116.0
+rect_min_size = Vector2( 24, 100 )
+custom_styles/panel = SubResource( 22 )
+
+[node name="SideLabel1" type="RichTextLabel" parent="HBoxContainer/HBoxContainer/VBoxContainer/PanelContainer2/Panel"]
+anchor_top = 1.1
+anchor_bottom = 1.25
+margin_left = 2.0
+margin_top = -12.0
+margin_right = 118.0
+rect_min_size = Vector2( 100, 24 )
+rect_rotation = -90.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[center][valign px=-2]  John"
+text = "  John"
+custom_effects = [ SubResource( 3 ) ]
+
+[node name="Label2" type="Label" parent="HBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 337.0
+margin_right = 24.0
+margin_bottom = 338.0
+custom_fonts/font = SubResource( 19 )
+custom_styles/normal = SubResource( 20 )
+
+[node name="PanelContainer3" type="PanelContainer" parent="HBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 342.0
+margin_right = 24.0
+margin_bottom = 458.0
+rect_min_size = Vector2( 24, 116 )
+custom_styles/panel = SubResource( 21 )
+
+[node name="Panel" type="Panel" parent="HBoxContainer/HBoxContainer/VBoxContainer/PanelContainer3"]
+margin_right = 24.0
+margin_bottom = 116.0
+rect_min_size = Vector2( 24, 100 )
+custom_styles/panel = SubResource( 22 )
+
+[node name="SideLabel2" type="RichTextLabel" parent="HBoxContainer/HBoxContainer/VBoxContainer/PanelContainer3/Panel"]
+anchor_top = 1.1
+anchor_bottom = 1.25
+margin_left = 2.0
+margin_top = -12.0
+margin_right = 118.0
+rect_min_size = Vector2( 100, 24 )
+rect_rotation = -90.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[center][valign px=-2]  John"
+text = "  John"
+custom_effects = [ SubResource( 3 ) ]
+
+[node name="Label3" type="Label" parent="HBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 462.0
+margin_right = 24.0
+margin_bottom = 463.0
+custom_fonts/font = SubResource( 19 )
+custom_styles/normal = SubResource( 20 )
+
+[node name="PanelContainer4" type="PanelContainer" parent="HBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 467.0
+margin_right = 24.0
+margin_bottom = 583.0
+rect_min_size = Vector2( 24, 116 )
+custom_styles/panel = SubResource( 21 )
+
+[node name="Panel" type="Panel" parent="HBoxContainer/HBoxContainer/VBoxContainer/PanelContainer4"]
+margin_right = 24.0
+margin_bottom = 116.0
+rect_min_size = Vector2( 24, 100 )
+custom_styles/panel = SubResource( 22 )
+
+[node name="SideLabel3" type="RichTextLabel" parent="HBoxContainer/HBoxContainer/VBoxContainer/PanelContainer4/Panel"]
+anchor_top = 1.1
+anchor_bottom = 1.25
+margin_left = 2.0
+margin_top = -12.0
+margin_right = 118.0
+rect_min_size = Vector2( 100, 24 )
+rect_rotation = -90.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[center][valign px=-2]  John"
+text = "  John"
+custom_effects = [ SubResource( 3 ) ]
+
+[node name="Label4" type="Label" parent="HBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 587.0
+margin_right = 24.0
+margin_bottom = 588.0
+custom_fonts/font = SubResource( 19 )
+custom_styles/normal = SubResource( 20 )
+
+[node name="PanelContainer5" type="PanelContainer" parent="HBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 592.0
+margin_right = 24.0
+margin_bottom = 708.0
+rect_min_size = Vector2( 24, 116 )
+custom_styles/panel = SubResource( 21 )
+
+[node name="Panel" type="Panel" parent="HBoxContainer/HBoxContainer/VBoxContainer/PanelContainer5"]
+margin_right = 24.0
+margin_bottom = 116.0
+rect_min_size = Vector2( 24, 100 )
+custom_styles/panel = SubResource( 22 )
+
+[node name="SideLabel4" type="RichTextLabel" parent="HBoxContainer/HBoxContainer/VBoxContainer/PanelContainer5/Panel"]
+anchor_top = 1.1
+anchor_bottom = 1.25
+margin_left = 2.0
+margin_top = -12.0
+margin_right = 118.0
+rect_min_size = Vector2( 100, 24 )
+rect_rotation = -90.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[center][valign px=-2]  John"
+text = "  John"
+custom_effects = [ SubResource( 3 ) ]
+
+[node name="Label5" type="Label" parent="HBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 712.0
+margin_right = 24.0
+margin_bottom = 713.0
+custom_fonts/font = SubResource( 19 )
+custom_styles/normal = SubResource( 20 )
+
+[node name="HLabels" type="VBoxContainer" parent="HBoxContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 178.0
+margin_bottom = 1050.0
+rect_min_size = Vector2( 150, 0 )
+
+[node name="Panel" type="Panel" parent="HBoxContainer/HBoxContainer/HLabels"]
+margin_right = 150.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 138, 24 )
+custom_styles/panel = SubResource( 23 )
+
+[node name="TopLabel" type="RichTextLabel" parent="HBoxContainer/HBoxContainer/HLabels/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+custom_effects = [ SubResource( 17 ) ]
+
+[node name="Square11" type="VBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels"]
+margin_top = 28.0
+margin_right = 150.0
+margin_bottom = 333.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square11"]
+margin_right = 150.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 0, 180 )
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square11/HBoxContainer"]
+margin_right = 150.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 150, 150 )
+custom_styles/panel = SubResource( 8 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square11/HBoxContainer/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 149.0
+margin_bottom = 179.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/HBoxContainer/HLabels/Square11/HBoxContainer/PanelContainer/HBoxContainer"]
+margin_right = 148.0
+margin_bottom = 178.0
+rect_min_size = Vector2( 100, 150 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 9 )
+
+[node name="LblTopLeft" type="RichTextLabel" parent="HBoxContainer/HBoxContainer/HLabels/Square11/HBoxContainer/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = ExtResource( 5 )
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="Label5" type="Label" parent="HBoxContainer/HBoxContainer/HLabels/Square11"]
+margin_top = 184.0
+margin_right = 150.0
+margin_bottom = 185.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square11"]
+margin_top = 189.0
+margin_right = 150.0
+margin_bottom = 215.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square11/HBoxContainer2"]
+margin_right = 150.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square11/HBoxContainer2/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 149.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/HBoxContainer/HLabels/Square11/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_right = 148.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 100, 24 )
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 2 )
+
+[node name="HLabel11" type="RichTextLabel" parent="HBoxContainer/HBoxContainer/HLabels/Square11/HBoxContainer2/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[right][valign px=-2]John  "
+text = "John  "
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square11"]
+margin_top = 219.0
+margin_right = 150.0
+margin_bottom = 245.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square11/HBoxContainer3"]
+margin_right = 150.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square11/HBoxContainer3/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 149.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/HBoxContainer/HLabels/Square11/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_right = 148.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 100, 24 )
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 2 )
+
+[node name="HLabel12" type="RichTextLabel" parent="HBoxContainer/HBoxContainer/HLabels/Square11/HBoxContainer3/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[right][valign px=-2]John  "
+text = "John  "
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square11"]
+margin_top = 249.0
+margin_right = 150.0
+margin_bottom = 275.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square11/HBoxContainer4"]
+margin_right = 150.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square11/HBoxContainer4/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 149.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/HBoxContainer/HLabels/Square11/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_right = 148.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 100, 24 )
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 2 )
+
+[node name="HLabel13" type="RichTextLabel" parent="HBoxContainer/HBoxContainer/HLabels/Square11/HBoxContainer4/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[right][valign px=-2]John  "
+text = "John  "
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square11"]
+margin_top = 279.0
+margin_right = 150.0
+margin_bottom = 305.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square11/HBoxContainer5"]
+margin_right = 150.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square11/HBoxContainer5/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 149.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/HBoxContainer/HLabels/Square11/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_right = 148.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 100, 24 )
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 2 )
+
+[node name="HLabel14" type="RichTextLabel" parent="HBoxContainer/HBoxContainer/HLabels/Square11/HBoxContainer5/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[right][valign px=-2]John  "
+text = "John  "
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="Label" type="Label" parent="HBoxContainer/HBoxContainer/HLabels"]
+margin_top = 337.0
+margin_right = 150.0
+margin_bottom = 338.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+
+[node name="Square21" type="VBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels"]
+margin_top = 342.0
+margin_right = 150.0
+margin_bottom = 458.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square21"]
+margin_right = 150.0
+margin_bottom = 26.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square21/HBoxContainer2"]
+margin_right = 150.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square21/HBoxContainer2/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 149.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/HBoxContainer/HLabels/Square21/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_right = 148.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 100, 24 )
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 2 )
+
+[node name="HLabel21" type="RichTextLabel" parent="HBoxContainer/HBoxContainer/HLabels/Square21/HBoxContainer2/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[right][valign px=-2]John  "
+text = "John  "
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square21"]
+margin_top = 30.0
+margin_right = 150.0
+margin_bottom = 56.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square21/HBoxContainer3"]
+margin_right = 150.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square21/HBoxContainer3/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 149.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/HBoxContainer/HLabels/Square21/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_right = 148.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 100, 24 )
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 2 )
+
+[node name="HLabel22" type="RichTextLabel" parent="HBoxContainer/HBoxContainer/HLabels/Square21/HBoxContainer3/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[right][valign px=-2]John  "
+text = "John  "
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square21"]
+margin_top = 60.0
+margin_right = 150.0
+margin_bottom = 86.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square21/HBoxContainer4"]
+margin_right = 150.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square21/HBoxContainer4/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 149.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/HBoxContainer/HLabels/Square21/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_right = 148.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 100, 24 )
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 2 )
+
+[node name="HLabel23" type="RichTextLabel" parent="HBoxContainer/HBoxContainer/HLabels/Square21/HBoxContainer4/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[right][valign px=-2]John  "
+text = "John  "
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square21"]
+margin_top = 90.0
+margin_right = 150.0
+margin_bottom = 116.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square21/HBoxContainer5"]
+margin_right = 150.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square21/HBoxContainer5/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 149.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/HBoxContainer/HLabels/Square21/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_right = 148.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 100, 24 )
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 2 )
+
+[node name="HLabel24" type="RichTextLabel" parent="HBoxContainer/HBoxContainer/HLabels/Square21/HBoxContainer5/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[right][valign px=-2]John  "
+text = "John  "
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="Label2" type="Label" parent="HBoxContainer/HBoxContainer/HLabels"]
+margin_top = 462.0
+margin_right = 150.0
+margin_bottom = 463.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+
+[node name="Square31" type="VBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels"]
+margin_top = 467.0
+margin_right = 150.0
+margin_bottom = 583.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square31"]
+margin_right = 150.0
+margin_bottom = 26.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square31/HBoxContainer2"]
+margin_right = 150.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square31/HBoxContainer2/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 149.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/HBoxContainer/HLabels/Square31/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_right = 148.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 100, 24 )
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 2 )
+
+[node name="HLabel31" type="RichTextLabel" parent="HBoxContainer/HBoxContainer/HLabels/Square31/HBoxContainer2/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[right][valign px=-2]John  "
+text = "John  "
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square31"]
+margin_top = 30.0
+margin_right = 150.0
+margin_bottom = 56.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square31/HBoxContainer3"]
+margin_right = 150.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square31/HBoxContainer3/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 149.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/HBoxContainer/HLabels/Square31/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_right = 148.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 100, 24 )
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 2 )
+
+[node name="HLabel32" type="RichTextLabel" parent="HBoxContainer/HBoxContainer/HLabels/Square31/HBoxContainer3/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[right][valign px=-2]John  "
+text = "John  "
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square31"]
+margin_top = 60.0
+margin_right = 150.0
+margin_bottom = 86.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square31/HBoxContainer4"]
+margin_right = 150.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square31/HBoxContainer4/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 149.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/HBoxContainer/HLabels/Square31/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_right = 148.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 100, 24 )
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 2 )
+
+[node name="HLabel33" type="RichTextLabel" parent="HBoxContainer/HBoxContainer/HLabels/Square31/HBoxContainer4/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[right][valign px=-2]John  "
+text = "John  "
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square31"]
+margin_top = 90.0
+margin_right = 150.0
+margin_bottom = 116.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square31/HBoxContainer5"]
+margin_right = 150.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square31/HBoxContainer5/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 149.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/HBoxContainer/HLabels/Square31/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_right = 148.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 100, 24 )
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 2 )
+
+[node name="HLabel34" type="RichTextLabel" parent="HBoxContainer/HBoxContainer/HLabels/Square31/HBoxContainer5/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[right][valign px=-2]John  "
+text = "John  "
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="Label3" type="Label" parent="HBoxContainer/HBoxContainer/HLabels"]
+margin_top = 587.0
+margin_right = 150.0
+margin_bottom = 588.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+
+[node name="Square41" type="VBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels"]
+margin_top = 592.0
+margin_right = 150.0
+margin_bottom = 708.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square41"]
+margin_right = 150.0
+margin_bottom = 26.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square41/HBoxContainer2"]
+margin_right = 150.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square41/HBoxContainer2/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 149.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/HBoxContainer/HLabels/Square41/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_right = 148.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 100, 24 )
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 2 )
+
+[node name="HLabel41" type="RichTextLabel" parent="HBoxContainer/HBoxContainer/HLabels/Square41/HBoxContainer2/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[right][valign px=-2]John  "
+text = "John  "
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square41"]
+margin_top = 30.0
+margin_right = 150.0
+margin_bottom = 56.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square41/HBoxContainer3"]
+margin_right = 150.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square41/HBoxContainer3/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 149.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/HBoxContainer/HLabels/Square41/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_right = 148.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 100, 24 )
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 2 )
+
+[node name="HLabel42" type="RichTextLabel" parent="HBoxContainer/HBoxContainer/HLabels/Square41/HBoxContainer3/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[right][valign px=-2]John  "
+text = "John  "
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square41"]
+margin_top = 60.0
+margin_right = 150.0
+margin_bottom = 86.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square41/HBoxContainer4"]
+margin_right = 150.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square41/HBoxContainer4/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 149.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/HBoxContainer/HLabels/Square41/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_right = 148.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 100, 24 )
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 2 )
+
+[node name="HLabel43" type="RichTextLabel" parent="HBoxContainer/HBoxContainer/HLabels/Square41/HBoxContainer4/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[right][valign px=-2]John  "
+text = "John  "
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square41"]
+margin_top = 90.0
+margin_right = 150.0
+margin_bottom = 116.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square41/HBoxContainer5"]
+margin_right = 150.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/HBoxContainer/HLabels/Square41/HBoxContainer5/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 149.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/HBoxContainer/HLabels/Square41/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_right = 148.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 100, 24 )
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 2 )
+
+[node name="HLabel44" type="RichTextLabel" parent="HBoxContainer/HBoxContainer/HLabels/Square41/HBoxContainer5/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[right][valign px=-2]John  "
+text = "John  "
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="Label4" type="Label" parent="HBoxContainer/HBoxContainer/HLabels"]
+margin_top = 712.0
+margin_right = 150.0
+margin_bottom = 713.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+
+[node name="Column1" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 182.0
+margin_right = 292.0
+margin_bottom = 1050.0
+rect_pivot_offset = Vector2( -509, 28 )
+
+[node name="Panel" type="Panel" parent="HBoxContainer/Column1"]
+margin_right = 110.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 100, 24 )
+custom_styles/panel = SubResource( 23 )
+
+[node name="TopLabel1" type="RichTextLabel" parent="HBoxContainer/Column1/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[center][valign px=-4]John"
+text = "John"
+custom_effects = [ SubResource( 17 ) ]
+
+[node name="Square11" type="VBoxContainer" parent="HBoxContainer/Column1"]
+margin_top = 28.0
+margin_right = 110.0
+margin_bottom = 333.0
+rect_min_size = Vector2( 0, 305 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column1/Square11"]
+margin_right = 110.0
+margin_bottom = 180.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column1/Square11/HBoxContainer"]
+margin_right = 110.0
+margin_bottom = 180.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column1/Square11/HBoxContainer/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 179.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column1/Square11/HBoxContainer/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 178.0
+rect_min_size = Vector2( 24, 100 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="VLabel11" type="RichTextLabel" parent="HBoxContainer/Column1/Square11/HBoxContainer/PanelContainer/HBoxContainer/Panel2"]
+anchor_top = 1.1
+anchor_bottom = 1.25
+margin_left = 2.0
+margin_top = -12.0
+margin_right = 152.0
+rect_min_size = Vector2( 100, 24 )
+rect_rotation = -90.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[valign px=-2]  John"
+text = "  John"
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column1/Square11/HBoxContainer/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 178.0
+rect_min_size = Vector2( 24, 100 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="VLabel12" type="RichTextLabel" parent="HBoxContainer/Column1/Square11/HBoxContainer/PanelContainer/HBoxContainer/Panel3"]
+anchor_top = 1.1
+anchor_bottom = 1.25
+margin_left = 2.0
+margin_top = -12.0
+margin_right = 152.0
+rect_min_size = Vector2( 100, 24 )
+rect_rotation = -90.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[valign px=-2]  John"
+text = "  John"
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column1/Square11/HBoxContainer/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 178.0
+rect_min_size = Vector2( 24, 100 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="VLabel13" type="RichTextLabel" parent="HBoxContainer/Column1/Square11/HBoxContainer/PanelContainer/HBoxContainer/Panel4"]
+anchor_top = 1.1
+anchor_bottom = 1.25
+margin_left = 2.0
+margin_top = -12.0
+margin_right = 152.0
+rect_min_size = Vector2( 100, 24 )
+rect_rotation = -90.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[valign px=-2]  John"
+text = "  John"
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column1/Square11/HBoxContainer/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 178.0
+rect_min_size = Vector2( 24, 100 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="VLabel14" type="RichTextLabel" parent="HBoxContainer/Column1/Square11/HBoxContainer/PanelContainer/HBoxContainer/Panel5"]
+anchor_top = 1.1
+anchor_bottom = 1.25
+margin_left = 2.0
+margin_top = -12.0
+margin_right = 152.0
+rect_min_size = Vector2( 100, 24 )
+rect_rotation = -90.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[valign px=-2]  John"
+text = "  John"
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="Label" type="Label" parent="HBoxContainer/Column1/Square11"]
+margin_top = 184.0
+margin_right = 110.0
+margin_bottom = 185.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/Column1/Square11"]
+margin_top = 189.0
+margin_right = 110.0
+margin_bottom = 215.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column1/Square11/HBoxContainer2"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column1/Square11/HBoxContainer2/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column1/Square11/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1111" type="TextureButton" parent="HBoxContainer/Column1/Square11/HBoxContainer2/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column1/Square11/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1112" type="TextureButton" parent="HBoxContainer/Column1/Square11/HBoxContainer2/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column1/Square11/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1113" type="TextureButton" parent="HBoxContainer/Column1/Square11/HBoxContainer2/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column1/Square11/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1114" type="TextureButton" parent="HBoxContainer/Column1/Square11/HBoxContainer2/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/Column1/Square11"]
+margin_top = 219.0
+margin_right = 110.0
+margin_bottom = 245.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column1/Square11/HBoxContainer3"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column1/Square11/HBoxContainer3/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column1/Square11/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1121" type="TextureButton" parent="HBoxContainer/Column1/Square11/HBoxContainer3/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column1/Square11/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1122" type="TextureButton" parent="HBoxContainer/Column1/Square11/HBoxContainer3/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column1/Square11/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1123" type="TextureButton" parent="HBoxContainer/Column1/Square11/HBoxContainer3/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column1/Square11/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1124" type="TextureButton" parent="HBoxContainer/Column1/Square11/HBoxContainer3/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/Column1/Square11"]
+margin_top = 249.0
+margin_right = 110.0
+margin_bottom = 275.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column1/Square11/HBoxContainer4"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column1/Square11/HBoxContainer4/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column1/Square11/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1131" type="TextureButton" parent="HBoxContainer/Column1/Square11/HBoxContainer4/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column1/Square11/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1132" type="TextureButton" parent="HBoxContainer/Column1/Square11/HBoxContainer4/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column1/Square11/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1133" type="TextureButton" parent="HBoxContainer/Column1/Square11/HBoxContainer4/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column1/Square11/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1134" type="TextureButton" parent="HBoxContainer/Column1/Square11/HBoxContainer4/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="HBoxContainer/Column1/Square11"]
+margin_top = 279.0
+margin_right = 110.0
+margin_bottom = 305.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column1/Square11/HBoxContainer5"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column1/Square11/HBoxContainer5/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column1/Square11/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1141" type="TextureButton" parent="HBoxContainer/Column1/Square11/HBoxContainer5/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column1/Square11/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1142" type="TextureButton" parent="HBoxContainer/Column1/Square11/HBoxContainer5/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column1/Square11/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1143" type="TextureButton" parent="HBoxContainer/Column1/Square11/HBoxContainer5/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column1/Square11/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1144" type="TextureButton" parent="HBoxContainer/Column1/Square11/HBoxContainer5/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Label2" type="Label" parent="HBoxContainer/Column1"]
+margin_top = 337.0
+margin_right = 110.0
+margin_bottom = 338.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+
+[node name="Square21" type="VBoxContainer" parent="HBoxContainer/Column1"]
+margin_top = 342.0
+margin_right = 110.0
+margin_bottom = 458.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/Column1/Square21"]
+margin_right = 110.0
+margin_bottom = 26.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column1/Square21/HBoxContainer2"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column1/Square21/HBoxContainer2/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column1/Square21/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2111" type="TextureButton" parent="HBoxContainer/Column1/Square21/HBoxContainer2/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column1/Square21/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2112" type="TextureButton" parent="HBoxContainer/Column1/Square21/HBoxContainer2/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column1/Square21/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2113" type="TextureButton" parent="HBoxContainer/Column1/Square21/HBoxContainer2/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column1/Square21/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2114" type="TextureButton" parent="HBoxContainer/Column1/Square21/HBoxContainer2/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/Column1/Square21"]
+margin_top = 30.0
+margin_right = 110.0
+margin_bottom = 56.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column1/Square21/HBoxContainer3"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column1/Square21/HBoxContainer3/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column1/Square21/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2121" type="TextureButton" parent="HBoxContainer/Column1/Square21/HBoxContainer3/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column1/Square21/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2122" type="TextureButton" parent="HBoxContainer/Column1/Square21/HBoxContainer3/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column1/Square21/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2123" type="TextureButton" parent="HBoxContainer/Column1/Square21/HBoxContainer3/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column1/Square21/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2124" type="TextureButton" parent="HBoxContainer/Column1/Square21/HBoxContainer3/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/Column1/Square21"]
+margin_top = 60.0
+margin_right = 110.0
+margin_bottom = 86.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column1/Square21/HBoxContainer4"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column1/Square21/HBoxContainer4/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column1/Square21/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2131" type="TextureButton" parent="HBoxContainer/Column1/Square21/HBoxContainer4/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column1/Square21/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2132" type="TextureButton" parent="HBoxContainer/Column1/Square21/HBoxContainer4/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column1/Square21/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2133" type="TextureButton" parent="HBoxContainer/Column1/Square21/HBoxContainer4/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column1/Square21/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2134" type="TextureButton" parent="HBoxContainer/Column1/Square21/HBoxContainer4/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="HBoxContainer/Column1/Square21"]
+margin_top = 90.0
+margin_right = 110.0
+margin_bottom = 116.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column1/Square21/HBoxContainer5"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column1/Square21/HBoxContainer5/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column1/Square21/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2141" type="TextureButton" parent="HBoxContainer/Column1/Square21/HBoxContainer5/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column1/Square21/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2142" type="TextureButton" parent="HBoxContainer/Column1/Square21/HBoxContainer5/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column1/Square21/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2143" type="TextureButton" parent="HBoxContainer/Column1/Square21/HBoxContainer5/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column1/Square21/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2144" type="TextureButton" parent="HBoxContainer/Column1/Square21/HBoxContainer5/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Label3" type="Label" parent="HBoxContainer/Column1"]
+margin_top = 462.0
+margin_right = 110.0
+margin_bottom = 463.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+
+[node name="Square31" type="VBoxContainer" parent="HBoxContainer/Column1"]
+margin_top = 467.0
+margin_right = 110.0
+margin_bottom = 583.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/Column1/Square31"]
+margin_right = 110.0
+margin_bottom = 26.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column1/Square31/HBoxContainer2"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column1/Square31/HBoxContainer2/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column1/Square31/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3111" type="TextureButton" parent="HBoxContainer/Column1/Square31/HBoxContainer2/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column1/Square31/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3112" type="TextureButton" parent="HBoxContainer/Column1/Square31/HBoxContainer2/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column1/Square31/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3113" type="TextureButton" parent="HBoxContainer/Column1/Square31/HBoxContainer2/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column1/Square31/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3114" type="TextureButton" parent="HBoxContainer/Column1/Square31/HBoxContainer2/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/Column1/Square31"]
+margin_top = 30.0
+margin_right = 110.0
+margin_bottom = 56.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column1/Square31/HBoxContainer3"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column1/Square31/HBoxContainer3/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column1/Square31/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3121" type="TextureButton" parent="HBoxContainer/Column1/Square31/HBoxContainer3/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column1/Square31/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3122" type="TextureButton" parent="HBoxContainer/Column1/Square31/HBoxContainer3/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column1/Square31/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3123" type="TextureButton" parent="HBoxContainer/Column1/Square31/HBoxContainer3/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column1/Square31/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3124" type="TextureButton" parent="HBoxContainer/Column1/Square31/HBoxContainer3/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/Column1/Square31"]
+margin_top = 60.0
+margin_right = 110.0
+margin_bottom = 86.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column1/Square31/HBoxContainer4"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column1/Square31/HBoxContainer4/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column1/Square31/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3131" type="TextureButton" parent="HBoxContainer/Column1/Square31/HBoxContainer4/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column1/Square31/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3132" type="TextureButton" parent="HBoxContainer/Column1/Square31/HBoxContainer4/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column1/Square31/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3133" type="TextureButton" parent="HBoxContainer/Column1/Square31/HBoxContainer4/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column1/Square31/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3134" type="TextureButton" parent="HBoxContainer/Column1/Square31/HBoxContainer4/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="HBoxContainer/Column1/Square31"]
+margin_top = 90.0
+margin_right = 110.0
+margin_bottom = 116.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column1/Square31/HBoxContainer5"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column1/Square31/HBoxContainer5/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column1/Square31/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3141" type="TextureButton" parent="HBoxContainer/Column1/Square31/HBoxContainer5/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column1/Square31/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3142" type="TextureButton" parent="HBoxContainer/Column1/Square31/HBoxContainer5/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column1/Square31/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3143" type="TextureButton" parent="HBoxContainer/Column1/Square31/HBoxContainer5/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column1/Square31/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3144" type="TextureButton" parent="HBoxContainer/Column1/Square31/HBoxContainer5/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Label4" type="Label" parent="HBoxContainer/Column1"]
+margin_top = 587.0
+margin_right = 110.0
+margin_bottom = 588.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+
+[node name="Square41" type="VBoxContainer" parent="HBoxContainer/Column1"]
+margin_top = 592.0
+margin_right = 110.0
+margin_bottom = 708.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/Column1/Square41"]
+margin_right = 110.0
+margin_bottom = 26.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column1/Square41/HBoxContainer2"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column1/Square41/HBoxContainer2/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column1/Square41/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn4111" type="TextureButton" parent="HBoxContainer/Column1/Square41/HBoxContainer2/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column1/Square41/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn4112" type="TextureButton" parent="HBoxContainer/Column1/Square41/HBoxContainer2/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column1/Square41/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn4113" type="TextureButton" parent="HBoxContainer/Column1/Square41/HBoxContainer2/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column1/Square41/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn4114" type="TextureButton" parent="HBoxContainer/Column1/Square41/HBoxContainer2/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/Column1/Square41"]
+margin_top = 30.0
+margin_right = 110.0
+margin_bottom = 56.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column1/Square41/HBoxContainer3"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column1/Square41/HBoxContainer3/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column1/Square41/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn4121" type="TextureButton" parent="HBoxContainer/Column1/Square41/HBoxContainer3/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column1/Square41/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn4122" type="TextureButton" parent="HBoxContainer/Column1/Square41/HBoxContainer3/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column1/Square41/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn4123" type="TextureButton" parent="HBoxContainer/Column1/Square41/HBoxContainer3/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column1/Square41/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn4124" type="TextureButton" parent="HBoxContainer/Column1/Square41/HBoxContainer3/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/Column1/Square41"]
+margin_top = 60.0
+margin_right = 110.0
+margin_bottom = 86.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column1/Square41/HBoxContainer4"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column1/Square41/HBoxContainer4/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column1/Square41/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn4131" type="TextureButton" parent="HBoxContainer/Column1/Square41/HBoxContainer4/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column1/Square41/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn4132" type="TextureButton" parent="HBoxContainer/Column1/Square41/HBoxContainer4/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column1/Square41/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn4133" type="TextureButton" parent="HBoxContainer/Column1/Square41/HBoxContainer4/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column1/Square41/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn4134" type="TextureButton" parent="HBoxContainer/Column1/Square41/HBoxContainer4/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="HBoxContainer/Column1/Square41"]
+margin_top = 90.0
+margin_right = 110.0
+margin_bottom = 116.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column1/Square41/HBoxContainer5"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column1/Square41/HBoxContainer5/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column1/Square41/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn4141" type="TextureButton" parent="HBoxContainer/Column1/Square41/HBoxContainer5/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column1/Square41/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn4142" type="TextureButton" parent="HBoxContainer/Column1/Square41/HBoxContainer5/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column1/Square41/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn4143" type="TextureButton" parent="HBoxContainer/Column1/Square41/HBoxContainer5/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column1/Square41/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn4144" type="TextureButton" parent="HBoxContainer/Column1/Square41/HBoxContainer5/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Label5" type="Label" parent="HBoxContainer/Column1"]
+margin_top = 712.0
+margin_right = 110.0
+margin_bottom = 713.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+
+[node name="Column2" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 296.0
+margin_right = 406.0
+margin_bottom = 1050.0
+
+[node name="Panel" type="Panel" parent="HBoxContainer/Column2"]
+margin_right = 110.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 100, 24 )
+custom_styles/panel = SubResource( 23 )
+
+[node name="TopLabel1" type="RichTextLabel" parent="HBoxContainer/Column2/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[center][valign px=-4]John"
+text = "John"
+custom_effects = [ SubResource( 17 ) ]
+
+[node name="Square12" type="VBoxContainer" parent="HBoxContainer/Column2"]
+margin_top = 28.0
+margin_right = 110.0
+margin_bottom = 333.0
+rect_min_size = Vector2( 0, 305 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column2/Square12"]
+margin_right = 110.0
+margin_bottom = 180.0
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column2/Square12/HBoxContainer"]
+margin_right = 110.0
+margin_bottom = 180.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column2/Square12/HBoxContainer/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 179.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column2/Square12/HBoxContainer/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 178.0
+rect_min_size = Vector2( 24, 100 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="VLabel21" type="RichTextLabel" parent="HBoxContainer/Column2/Square12/HBoxContainer/PanelContainer/HBoxContainer/Panel2"]
+anchor_top = 1.1
+anchor_bottom = 1.25
+margin_left = 2.0
+margin_top = -12.0
+margin_right = 152.0
+rect_min_size = Vector2( 100, 24 )
+rect_rotation = -90.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[valign px=-2]  John"
+text = "  John"
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column2/Square12/HBoxContainer/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 178.0
+rect_min_size = Vector2( 24, 100 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="VLabel22" type="RichTextLabel" parent="HBoxContainer/Column2/Square12/HBoxContainer/PanelContainer/HBoxContainer/Panel3"]
+anchor_top = 1.1
+anchor_bottom = 1.25
+margin_left = 2.0
+margin_top = -12.0
+margin_right = 152.0
+rect_min_size = Vector2( 100, 24 )
+rect_rotation = -90.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[valign px=-2]  John"
+text = "  John"
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column2/Square12/HBoxContainer/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 178.0
+rect_min_size = Vector2( 24, 100 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="VLabel23" type="RichTextLabel" parent="HBoxContainer/Column2/Square12/HBoxContainer/PanelContainer/HBoxContainer/Panel4"]
+anchor_top = 1.1
+anchor_bottom = 1.25
+margin_left = 2.0
+margin_top = -12.0
+margin_right = 152.0
+rect_min_size = Vector2( 100, 24 )
+rect_rotation = -90.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[valign px=-2]  John"
+text = "  John"
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column2/Square12/HBoxContainer/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 178.0
+rect_min_size = Vector2( 24, 100 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="VLabel24" type="RichTextLabel" parent="HBoxContainer/Column2/Square12/HBoxContainer/PanelContainer/HBoxContainer/Panel5"]
+anchor_top = 1.1
+anchor_bottom = 1.25
+margin_left = 2.0
+margin_top = -12.0
+margin_right = 152.0
+rect_min_size = Vector2( 100, 24 )
+rect_rotation = -90.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[valign px=-2]  John"
+text = "  John"
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="Label" type="Label" parent="HBoxContainer/Column2/Square12"]
+margin_top = 184.0
+margin_right = 110.0
+margin_bottom = 185.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/Column2/Square12"]
+margin_top = 189.0
+margin_right = 110.0
+margin_bottom = 215.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column2/Square12/HBoxContainer2"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column2/Square12/HBoxContainer2/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column2/Square12/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1211" type="TextureButton" parent="HBoxContainer/Column2/Square12/HBoxContainer2/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column2/Square12/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1212" type="TextureButton" parent="HBoxContainer/Column2/Square12/HBoxContainer2/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column2/Square12/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1213" type="TextureButton" parent="HBoxContainer/Column2/Square12/HBoxContainer2/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column2/Square12/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1214" type="TextureButton" parent="HBoxContainer/Column2/Square12/HBoxContainer2/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/Column2/Square12"]
+margin_top = 219.0
+margin_right = 110.0
+margin_bottom = 245.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column2/Square12/HBoxContainer3"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column2/Square12/HBoxContainer3/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column2/Square12/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1221" type="TextureButton" parent="HBoxContainer/Column2/Square12/HBoxContainer3/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column2/Square12/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1222" type="TextureButton" parent="HBoxContainer/Column2/Square12/HBoxContainer3/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column2/Square12/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1223" type="TextureButton" parent="HBoxContainer/Column2/Square12/HBoxContainer3/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column2/Square12/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1224" type="TextureButton" parent="HBoxContainer/Column2/Square12/HBoxContainer3/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/Column2/Square12"]
+margin_top = 249.0
+margin_right = 110.0
+margin_bottom = 275.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column2/Square12/HBoxContainer4"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column2/Square12/HBoxContainer4/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column2/Square12/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1231" type="TextureButton" parent="HBoxContainer/Column2/Square12/HBoxContainer4/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column2/Square12/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1232" type="TextureButton" parent="HBoxContainer/Column2/Square12/HBoxContainer4/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column2/Square12/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1233" type="TextureButton" parent="HBoxContainer/Column2/Square12/HBoxContainer4/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column2/Square12/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1234" type="TextureButton" parent="HBoxContainer/Column2/Square12/HBoxContainer4/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="HBoxContainer/Column2/Square12"]
+margin_top = 279.0
+margin_right = 110.0
+margin_bottom = 305.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column2/Square12/HBoxContainer5"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column2/Square12/HBoxContainer5/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column2/Square12/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1241" type="TextureButton" parent="HBoxContainer/Column2/Square12/HBoxContainer5/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column2/Square12/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1242" type="TextureButton" parent="HBoxContainer/Column2/Square12/HBoxContainer5/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column2/Square12/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1243" type="TextureButton" parent="HBoxContainer/Column2/Square12/HBoxContainer5/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column2/Square12/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1244" type="TextureButton" parent="HBoxContainer/Column2/Square12/HBoxContainer5/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Label2" type="Label" parent="HBoxContainer/Column2"]
+margin_top = 337.0
+margin_right = 110.0
+margin_bottom = 338.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+
+[node name="Square22" type="VBoxContainer" parent="HBoxContainer/Column2"]
+margin_top = 342.0
+margin_right = 110.0
+margin_bottom = 458.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/Column2/Square22"]
+margin_right = 110.0
+margin_bottom = 26.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column2/Square22/HBoxContainer2"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column2/Square22/HBoxContainer2/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column2/Square22/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2211" type="TextureButton" parent="HBoxContainer/Column2/Square22/HBoxContainer2/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column2/Square22/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2212" type="TextureButton" parent="HBoxContainer/Column2/Square22/HBoxContainer2/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column2/Square22/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2213" type="TextureButton" parent="HBoxContainer/Column2/Square22/HBoxContainer2/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column2/Square22/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2214" type="TextureButton" parent="HBoxContainer/Column2/Square22/HBoxContainer2/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/Column2/Square22"]
+margin_top = 30.0
+margin_right = 110.0
+margin_bottom = 56.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column2/Square22/HBoxContainer3"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column2/Square22/HBoxContainer3/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column2/Square22/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2221" type="TextureButton" parent="HBoxContainer/Column2/Square22/HBoxContainer3/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column2/Square22/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2222" type="TextureButton" parent="HBoxContainer/Column2/Square22/HBoxContainer3/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column2/Square22/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2223" type="TextureButton" parent="HBoxContainer/Column2/Square22/HBoxContainer3/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column2/Square22/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2224" type="TextureButton" parent="HBoxContainer/Column2/Square22/HBoxContainer3/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/Column2/Square22"]
+margin_top = 60.0
+margin_right = 110.0
+margin_bottom = 86.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column2/Square22/HBoxContainer4"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column2/Square22/HBoxContainer4/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column2/Square22/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2231" type="TextureButton" parent="HBoxContainer/Column2/Square22/HBoxContainer4/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column2/Square22/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2232" type="TextureButton" parent="HBoxContainer/Column2/Square22/HBoxContainer4/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column2/Square22/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2233" type="TextureButton" parent="HBoxContainer/Column2/Square22/HBoxContainer4/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column2/Square22/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2234" type="TextureButton" parent="HBoxContainer/Column2/Square22/HBoxContainer4/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="HBoxContainer/Column2/Square22"]
+margin_top = 90.0
+margin_right = 110.0
+margin_bottom = 116.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column2/Square22/HBoxContainer5"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column2/Square22/HBoxContainer5/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column2/Square22/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2241" type="TextureButton" parent="HBoxContainer/Column2/Square22/HBoxContainer5/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column2/Square22/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2242" type="TextureButton" parent="HBoxContainer/Column2/Square22/HBoxContainer5/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column2/Square22/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2243" type="TextureButton" parent="HBoxContainer/Column2/Square22/HBoxContainer5/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column2/Square22/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2244" type="TextureButton" parent="HBoxContainer/Column2/Square22/HBoxContainer5/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Label3" type="Label" parent="HBoxContainer/Column2"]
+margin_top = 462.0
+margin_right = 110.0
+margin_bottom = 463.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+
+[node name="Square32" type="VBoxContainer" parent="HBoxContainer/Column2"]
+margin_top = 467.0
+margin_right = 110.0
+margin_bottom = 583.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/Column2/Square32"]
+margin_right = 110.0
+margin_bottom = 26.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column2/Square32/HBoxContainer2"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column2/Square32/HBoxContainer2/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column2/Square32/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3211" type="TextureButton" parent="HBoxContainer/Column2/Square32/HBoxContainer2/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column2/Square32/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3212" type="TextureButton" parent="HBoxContainer/Column2/Square32/HBoxContainer2/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column2/Square32/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3213" type="TextureButton" parent="HBoxContainer/Column2/Square32/HBoxContainer2/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column2/Square32/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3214" type="TextureButton" parent="HBoxContainer/Column2/Square32/HBoxContainer2/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/Column2/Square32"]
+margin_top = 30.0
+margin_right = 110.0
+margin_bottom = 56.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column2/Square32/HBoxContainer3"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column2/Square32/HBoxContainer3/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column2/Square32/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3221" type="TextureButton" parent="HBoxContainer/Column2/Square32/HBoxContainer3/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column2/Square32/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3222" type="TextureButton" parent="HBoxContainer/Column2/Square32/HBoxContainer3/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column2/Square32/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3223" type="TextureButton" parent="HBoxContainer/Column2/Square32/HBoxContainer3/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column2/Square32/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3224" type="TextureButton" parent="HBoxContainer/Column2/Square32/HBoxContainer3/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/Column2/Square32"]
+margin_top = 60.0
+margin_right = 110.0
+margin_bottom = 86.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column2/Square32/HBoxContainer4"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column2/Square32/HBoxContainer4/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column2/Square32/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3231" type="TextureButton" parent="HBoxContainer/Column2/Square32/HBoxContainer4/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column2/Square32/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3232" type="TextureButton" parent="HBoxContainer/Column2/Square32/HBoxContainer4/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column2/Square32/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3233" type="TextureButton" parent="HBoxContainer/Column2/Square32/HBoxContainer4/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column2/Square32/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3234" type="TextureButton" parent="HBoxContainer/Column2/Square32/HBoxContainer4/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="HBoxContainer/Column2/Square32"]
+margin_top = 90.0
+margin_right = 110.0
+margin_bottom = 116.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column2/Square32/HBoxContainer5"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column2/Square32/HBoxContainer5/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column2/Square32/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3241" type="TextureButton" parent="HBoxContainer/Column2/Square32/HBoxContainer5/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column2/Square32/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3242" type="TextureButton" parent="HBoxContainer/Column2/Square32/HBoxContainer5/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column2/Square32/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3243" type="TextureButton" parent="HBoxContainer/Column2/Square32/HBoxContainer5/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column2/Square32/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn3244" type="TextureButton" parent="HBoxContainer/Column2/Square32/HBoxContainer5/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Label4" type="Label" parent="HBoxContainer/Column2"]
+margin_top = 587.0
+margin_right = 110.0
+margin_bottom = 588.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+
+[node name="Column3" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 410.0
+margin_right = 520.0
+margin_bottom = 1050.0
+
+[node name="Panel" type="Panel" parent="HBoxContainer/Column3"]
+margin_right = 110.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 100, 24 )
+custom_styles/panel = SubResource( 23 )
+
+[node name="TopLabel1" type="RichTextLabel" parent="HBoxContainer/Column3/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[center][valign px=-4]John"
+text = "John"
+custom_effects = [ SubResource( 17 ) ]
+
+[node name="Square13" type="VBoxContainer" parent="HBoxContainer/Column3"]
+margin_top = 28.0
+margin_right = 110.0
+margin_bottom = 333.0
+rect_min_size = Vector2( 0, 305 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column3/Square13"]
+margin_right = 110.0
+margin_bottom = 180.0
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column3/Square13/HBoxContainer"]
+margin_right = 110.0
+margin_bottom = 180.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column3/Square13/HBoxContainer/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 179.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column3/Square13/HBoxContainer/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 178.0
+rect_min_size = Vector2( 24, 100 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="VLabel31" type="RichTextLabel" parent="HBoxContainer/Column3/Square13/HBoxContainer/PanelContainer/HBoxContainer/Panel2"]
+anchor_top = 1.1
+anchor_bottom = 1.25
+margin_left = 2.0
+margin_top = -12.0
+margin_right = 152.0
+rect_min_size = Vector2( 100, 24 )
+rect_rotation = -90.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[valign px=-2]  John"
+text = "  John"
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column3/Square13/HBoxContainer/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 178.0
+rect_min_size = Vector2( 24, 100 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="VLabel32" type="RichTextLabel" parent="HBoxContainer/Column3/Square13/HBoxContainer/PanelContainer/HBoxContainer/Panel3"]
+anchor_top = 1.1
+anchor_bottom = 1.25
+margin_left = 2.0
+margin_top = -12.0
+margin_right = 152.0
+rect_min_size = Vector2( 100, 24 )
+rect_rotation = -90.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[valign px=-2]  John"
+text = "  John"
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column3/Square13/HBoxContainer/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 178.0
+rect_min_size = Vector2( 24, 100 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="VLabel33" type="RichTextLabel" parent="HBoxContainer/Column3/Square13/HBoxContainer/PanelContainer/HBoxContainer/Panel4"]
+anchor_top = 1.1
+anchor_bottom = 1.25
+margin_left = 2.0
+margin_top = -12.0
+margin_right = 152.0
+rect_min_size = Vector2( 100, 24 )
+rect_rotation = -90.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[valign px=-2]  John"
+text = "  John"
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column3/Square13/HBoxContainer/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 178.0
+rect_min_size = Vector2( 24, 100 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="VLabel34" type="RichTextLabel" parent="HBoxContainer/Column3/Square13/HBoxContainer/PanelContainer/HBoxContainer/Panel5"]
+anchor_top = 1.1
+anchor_bottom = 1.25
+margin_left = 2.0
+margin_top = -12.0
+margin_right = 152.0
+rect_min_size = Vector2( 100, 24 )
+rect_rotation = -90.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[valign px=-2]  John"
+text = "  John"
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="Label" type="Label" parent="HBoxContainer/Column3/Square13"]
+margin_top = 184.0
+margin_right = 110.0
+margin_bottom = 185.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/Column3/Square13"]
+margin_top = 189.0
+margin_right = 110.0
+margin_bottom = 215.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column3/Square13/HBoxContainer2"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column3/Square13/HBoxContainer2/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column3/Square13/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1311" type="TextureButton" parent="HBoxContainer/Column3/Square13/HBoxContainer2/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column3/Square13/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1312" type="TextureButton" parent="HBoxContainer/Column3/Square13/HBoxContainer2/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column3/Square13/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1313" type="TextureButton" parent="HBoxContainer/Column3/Square13/HBoxContainer2/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column3/Square13/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1314" type="TextureButton" parent="HBoxContainer/Column3/Square13/HBoxContainer2/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/Column3/Square13"]
+margin_top = 219.0
+margin_right = 110.0
+margin_bottom = 245.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column3/Square13/HBoxContainer3"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column3/Square13/HBoxContainer3/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column3/Square13/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1321" type="TextureButton" parent="HBoxContainer/Column3/Square13/HBoxContainer3/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column3/Square13/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1322" type="TextureButton" parent="HBoxContainer/Column3/Square13/HBoxContainer3/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column3/Square13/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1323" type="TextureButton" parent="HBoxContainer/Column3/Square13/HBoxContainer3/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column3/Square13/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1324" type="TextureButton" parent="HBoxContainer/Column3/Square13/HBoxContainer3/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/Column3/Square13"]
+margin_top = 249.0
+margin_right = 110.0
+margin_bottom = 275.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column3/Square13/HBoxContainer4"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column3/Square13/HBoxContainer4/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column3/Square13/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1331" type="TextureButton" parent="HBoxContainer/Column3/Square13/HBoxContainer4/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column3/Square13/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1332" type="TextureButton" parent="HBoxContainer/Column3/Square13/HBoxContainer4/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column3/Square13/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1333" type="TextureButton" parent="HBoxContainer/Column3/Square13/HBoxContainer4/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column3/Square13/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1334" type="TextureButton" parent="HBoxContainer/Column3/Square13/HBoxContainer4/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="HBoxContainer/Column3/Square13"]
+margin_top = 279.0
+margin_right = 110.0
+margin_bottom = 305.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column3/Square13/HBoxContainer5"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column3/Square13/HBoxContainer5/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column3/Square13/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1341" type="TextureButton" parent="HBoxContainer/Column3/Square13/HBoxContainer5/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column3/Square13/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1342" type="TextureButton" parent="HBoxContainer/Column3/Square13/HBoxContainer5/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column3/Square13/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1343" type="TextureButton" parent="HBoxContainer/Column3/Square13/HBoxContainer5/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column3/Square13/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1344" type="TextureButton" parent="HBoxContainer/Column3/Square13/HBoxContainer5/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Label2" type="Label" parent="HBoxContainer/Column3"]
+margin_top = 337.0
+margin_right = 110.0
+margin_bottom = 338.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+
+[node name="Square23" type="VBoxContainer" parent="HBoxContainer/Column3"]
+margin_top = 342.0
+margin_right = 110.0
+margin_bottom = 458.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/Column3/Square23"]
+margin_right = 110.0
+margin_bottom = 26.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column3/Square23/HBoxContainer2"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column3/Square23/HBoxContainer2/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column3/Square23/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2311" type="TextureButton" parent="HBoxContainer/Column3/Square23/HBoxContainer2/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column3/Square23/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2312" type="TextureButton" parent="HBoxContainer/Column3/Square23/HBoxContainer2/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column3/Square23/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2313" type="TextureButton" parent="HBoxContainer/Column3/Square23/HBoxContainer2/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column3/Square23/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2314" type="TextureButton" parent="HBoxContainer/Column3/Square23/HBoxContainer2/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/Column3/Square23"]
+margin_top = 30.0
+margin_right = 110.0
+margin_bottom = 56.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column3/Square23/HBoxContainer3"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column3/Square23/HBoxContainer3/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column3/Square23/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2321" type="TextureButton" parent="HBoxContainer/Column3/Square23/HBoxContainer3/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column3/Square23/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2322" type="TextureButton" parent="HBoxContainer/Column3/Square23/HBoxContainer3/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column3/Square23/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2323" type="TextureButton" parent="HBoxContainer/Column3/Square23/HBoxContainer3/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column3/Square23/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2324" type="TextureButton" parent="HBoxContainer/Column3/Square23/HBoxContainer3/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/Column3/Square23"]
+margin_top = 60.0
+margin_right = 110.0
+margin_bottom = 86.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column3/Square23/HBoxContainer4"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column3/Square23/HBoxContainer4/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column3/Square23/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2331" type="TextureButton" parent="HBoxContainer/Column3/Square23/HBoxContainer4/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column3/Square23/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2332" type="TextureButton" parent="HBoxContainer/Column3/Square23/HBoxContainer4/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column3/Square23/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2333" type="TextureButton" parent="HBoxContainer/Column3/Square23/HBoxContainer4/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column3/Square23/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2334" type="TextureButton" parent="HBoxContainer/Column3/Square23/HBoxContainer4/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="HBoxContainer/Column3/Square23"]
+margin_top = 90.0
+margin_right = 110.0
+margin_bottom = 116.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column3/Square23/HBoxContainer5"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column3/Square23/HBoxContainer5/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column3/Square23/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2341" type="TextureButton" parent="HBoxContainer/Column3/Square23/HBoxContainer5/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column3/Square23/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2342" type="TextureButton" parent="HBoxContainer/Column3/Square23/HBoxContainer5/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column3/Square23/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2343" type="TextureButton" parent="HBoxContainer/Column3/Square23/HBoxContainer5/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column3/Square23/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn2344" type="TextureButton" parent="HBoxContainer/Column3/Square23/HBoxContainer5/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Label3" type="Label" parent="HBoxContainer/Column3"]
+margin_top = 462.0
+margin_right = 110.0
+margin_bottom = 463.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+
+[node name="Column4" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 524.0
+margin_right = 634.0
+margin_bottom = 1050.0
+
+[node name="Panel" type="Panel" parent="HBoxContainer/Column4"]
+margin_right = 110.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 100, 24 )
+custom_styles/panel = SubResource( 23 )
+
+[node name="TopLabel1" type="RichTextLabel" parent="HBoxContainer/Column4/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[center][valign px=-4]John"
+text = "John"
+custom_effects = [ SubResource( 17 ) ]
+
+[node name="Square14" type="VBoxContainer" parent="HBoxContainer/Column4"]
+margin_top = 28.0
+margin_right = 110.0
+margin_bottom = 333.0
+rect_min_size = Vector2( 0, 305 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column4/Square14"]
+margin_right = 110.0
+margin_bottom = 180.0
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column4/Square14/HBoxContainer"]
+margin_right = 110.0
+margin_bottom = 180.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column4/Square14/HBoxContainer/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 179.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column4/Square14/HBoxContainer/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 178.0
+rect_min_size = Vector2( 24, 100 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="VLabel41" type="RichTextLabel" parent="HBoxContainer/Column4/Square14/HBoxContainer/PanelContainer/HBoxContainer/Panel2"]
+anchor_top = 1.1
+anchor_bottom = 1.25
+margin_left = 2.0
+margin_top = -12.0
+margin_right = 152.0
+rect_min_size = Vector2( 100, 24 )
+rect_rotation = -90.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[valign px=-2]  John"
+text = "  John"
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column4/Square14/HBoxContainer/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 178.0
+rect_min_size = Vector2( 24, 100 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="VLabel42" type="RichTextLabel" parent="HBoxContainer/Column4/Square14/HBoxContainer/PanelContainer/HBoxContainer/Panel3"]
+anchor_top = 1.1
+anchor_bottom = 1.25
+margin_left = 2.0
+margin_top = -12.0
+margin_right = 152.0
+rect_min_size = Vector2( 100, 24 )
+rect_rotation = -90.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[valign px=-2]  John"
+text = "  John"
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column4/Square14/HBoxContainer/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 178.0
+rect_min_size = Vector2( 24, 100 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="VLabel43" type="RichTextLabel" parent="HBoxContainer/Column4/Square14/HBoxContainer/PanelContainer/HBoxContainer/Panel4"]
+anchor_top = 1.1
+anchor_bottom = 1.25
+margin_left = 2.0
+margin_top = -12.0
+margin_right = 152.0
+rect_min_size = Vector2( 100, 24 )
+rect_rotation = -90.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[valign px=-2]  John"
+text = "  John"
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column4/Square14/HBoxContainer/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 178.0
+rect_min_size = Vector2( 24, 100 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="VLabel44" type="RichTextLabel" parent="HBoxContainer/Column4/Square14/HBoxContainer/PanelContainer/HBoxContainer/Panel5"]
+anchor_top = 1.1
+anchor_bottom = 1.25
+margin_left = 2.0
+margin_top = -12.0
+margin_right = 152.0
+rect_min_size = Vector2( 100, 24 )
+rect_rotation = -90.0
+custom_colors/default_color = Color( 0.45098, 0, 0.45098, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[valign px=-2]  John"
+text = "  John"
+custom_effects = [ SubResource( 24 ) ]
+
+[node name="Label" type="Label" parent="HBoxContainer/Column4/Square14"]
+margin_top = 184.0
+margin_right = 110.0
+margin_bottom = 185.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/Column4/Square14"]
+margin_top = 189.0
+margin_right = 110.0
+margin_bottom = 215.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column4/Square14/HBoxContainer2"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column4/Square14/HBoxContainer2/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column4/Square14/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1411" type="TextureButton" parent="HBoxContainer/Column4/Square14/HBoxContainer2/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column4/Square14/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1412" type="TextureButton" parent="HBoxContainer/Column4/Square14/HBoxContainer2/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column4/Square14/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1413" type="TextureButton" parent="HBoxContainer/Column4/Square14/HBoxContainer2/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column4/Square14/HBoxContainer2/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1414" type="TextureButton" parent="HBoxContainer/Column4/Square14/HBoxContainer2/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/Column4/Square14"]
+margin_top = 219.0
+margin_right = 110.0
+margin_bottom = 245.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column4/Square14/HBoxContainer3"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column4/Square14/HBoxContainer3/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column4/Square14/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1421" type="TextureButton" parent="HBoxContainer/Column4/Square14/HBoxContainer3/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column4/Square14/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1422" type="TextureButton" parent="HBoxContainer/Column4/Square14/HBoxContainer3/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column4/Square14/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1423" type="TextureButton" parent="HBoxContainer/Column4/Square14/HBoxContainer3/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column4/Square14/HBoxContainer3/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1424" type="TextureButton" parent="HBoxContainer/Column4/Square14/HBoxContainer3/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/Column4/Square14"]
+margin_top = 249.0
+margin_right = 110.0
+margin_bottom = 275.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column4/Square14/HBoxContainer4"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column4/Square14/HBoxContainer4/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column4/Square14/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1431" type="TextureButton" parent="HBoxContainer/Column4/Square14/HBoxContainer4/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column4/Square14/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1432" type="TextureButton" parent="HBoxContainer/Column4/Square14/HBoxContainer4/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column4/Square14/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1433" type="TextureButton" parent="HBoxContainer/Column4/Square14/HBoxContainer4/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column4/Square14/HBoxContainer4/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1434" type="TextureButton" parent="HBoxContainer/Column4/Square14/HBoxContainer4/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="HBoxContainer/Column4/Square14"]
+margin_top = 279.0
+margin_right = 110.0
+margin_bottom = 305.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Column4/Square14/HBoxContainer5"]
+margin_right = 110.0
+margin_bottom = 26.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Column4/Square14/HBoxContainer5/PanelContainer"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 109.0
+margin_bottom = 25.0
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Column4/Square14/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1441" type="TextureButton" parent="HBoxContainer/Column4/Square14/HBoxContainer5/PanelContainer/HBoxContainer/Panel2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel3" type="Panel" parent="HBoxContainer/Column4/Square14/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1442" type="TextureButton" parent="HBoxContainer/Column4/Square14/HBoxContainer5/PanelContainer/HBoxContainer/Panel3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel4" type="Panel" parent="HBoxContainer/Column4/Square14/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1443" type="TextureButton" parent="HBoxContainer/Column4/Square14/HBoxContainer5/PanelContainer/HBoxContainer/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Panel5" type="Panel" parent="HBoxContainer/Column4/Square14/HBoxContainer5/PanelContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="btn1444" type="TextureButton" parent="HBoxContainer/Column4/Square14/HBoxContainer5/PanelContainer/HBoxContainer/Panel5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 24, 24 )
+button_mask = 3
+
+[node name="Label2" type="Label" parent="HBoxContainer/Column4"]
+margin_top = 337.0
+margin_right = 110.0
+margin_bottom = 338.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+margin_left = 638.0
+margin_right = 976.0
+margin_bottom = 1050.0
+rect_min_size = Vector2( 25, 0 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CluesAndButtons" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 980.0
+margin_right = 1680.0
+margin_bottom = 1050.0
+size_flags_horizontal = 3
+
+[node name="Clues" type="RichTextLabel" parent="HBoxContainer/CluesAndButtons"]
+margin_right = 700.0
+margin_bottom = 705.0
+rect_min_size = Vector2( 700, 0 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/default_color = Color( 0.449219, 0, 0.449219, 1 )
+custom_fonts/normal_font = ExtResource( 4 )
+custom_styles/normal = SubResource( 10 )
+bbcode_enabled = true
+bbcode_text = " CLUES:
+ Clue 1:
+ Clue 2:
+...
+ Clue N: The man in the lavender house drinks coffee"
+text = " CLUES:
+ Clue 1:
+ Clue 2:
+...
+ Clue N: The man in the lavender house drinks coffee"
+
+[node name="Time" type="RichTextLabel" parent="HBoxContainer/CluesAndButtons"]
+margin_top = 709.0
+margin_right = 700.0
+margin_bottom = 759.0
+rect_min_size = Vector2( 0, 50 )
+custom_fonts/normal_font = ExtResource( 6 )
+bbcode_enabled = true
+bbcode_text = "[center][valign px=-6]Time: 00:00:00"
+text = "Time: 00:00:00"
+custom_effects = [ SubResource( 11 ) ]
+
+[node name="Buttons" type="HBoxContainer" parent="HBoxContainer/CluesAndButtons"]
+margin_top = 763.0
+margin_right = 700.0
+margin_bottom = 1050.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/CluesAndButtons/Buttons"]
+margin_right = 700.0
+margin_bottom = 287.0
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer"]
+margin_right = 700.0
+margin_bottom = 100.0
+
+[node name="Label" type="Label" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer2"]
+margin_top = 43.0
+margin_right = 171.0
+margin_bottom = 57.0
+size_flags_horizontal = 3
+
+[node name="btnSupp" type="Button" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer2"]
+margin_left = 175.0
+margin_right = 525.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 350, 100 )
+custom_fonts/font = ExtResource( 3 )
+text = "GET MORE CLUES"
+
+[node name="Label2" type="Label" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer2"]
+margin_left = 529.0
+margin_right = 700.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+
+[node name="Label3" type="Label" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer"]
+margin_top = 104.0
+margin_right = 700.0
+margin_bottom = 129.0
+rect_min_size = Vector2( 0, 25 )
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer"]
+margin_top = 133.0
+margin_right = 700.0
+margin_bottom = 233.0
+
+[node name="btnCheck" type="Button" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer"]
+margin_right = 250.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 250, 100 )
+custom_fonts/font = ExtResource( 3 )
+text = "CHECK GRID"
+
+[node name="Label" type="Label" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer"]
+margin_left = 254.0
+margin_right = 446.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+
+[node name="btnQuit" type="Button" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer"]
+margin_left = 450.0
+margin_right = 700.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 250, 100 )
+custom_fonts/font = ExtResource( 3 )
+toggle_mode = true
+text = "QUIT GAME"
+
+[node name="Label4" type="Label" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer"]
+margin_top = 237.0
+margin_right = 700.0
+margin_bottom = 287.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+
+[node name="dlgCheck" type="PopupPanel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -125.0
+margin_right = 200.0
+margin_bottom = 125.0
+popup_exclusive = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="dlgCheck"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 404.0
+margin_bottom = 254.0
+rect_min_size = Vector2( 400, 250 )
+
+[node name="Header" type="RichTextLabel" parent="dlgCheck/VBoxContainer"]
+margin_right = 400.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 400, 30 )
+size_flags_horizontal = 3
+custom_fonts/normal_font = ExtResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[center]HEADER GOES HERE"
+text = "HEADER GOES HERE"
+
+[node name="Label" type="Label" parent="dlgCheck/VBoxContainer"]
+margin_top = 34.0
+margin_right = 400.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 400, 15 )
+custom_styles/normal = SubResource( 12 )
+
+[node name="Content" type="RichTextLabel" parent="dlgCheck/VBoxContainer"]
+margin_top = 53.0
+margin_right = 400.0
+margin_bottom = 195.0
+rect_min_size = Vector2( 400, 100 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = ExtResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[center][valign px=-18]CONTENT GOES HERE"
+text = "CONTENT GOES HERE"
+custom_effects = [ SubResource( 13 ) ]
+
+[node name="Label2" type="Label" parent="dlgCheck/VBoxContainer"]
+margin_top = 199.0
+margin_right = 400.0
+margin_bottom = 214.0
+rect_min_size = Vector2( 400, 15 )
+custom_styles/normal = SubResource( 12 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="dlgCheck/VBoxContainer"]
+margin_top = 218.0
+margin_right = 400.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 400, 30 )
+
+[node name="btnYes" type="Button" parent="dlgCheck/VBoxContainer/HBoxContainer"]
+margin_right = 100.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 100, 30 )
+custom_fonts/font = ExtResource( 4 )
+text = "YES"
+
+[node name="Label" type="Label" parent="dlgCheck/VBoxContainer/HBoxContainer"]
+margin_left = 104.0
+margin_top = 1.0
+margin_right = 146.0
+margin_bottom = 31.0
+rect_min_size = Vector2( 30, 30 )
+size_flags_horizontal = 3
+
+[node name="btnOK" type="Button" parent="dlgCheck/VBoxContainer/HBoxContainer"]
+margin_left = 150.0
+margin_right = 250.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 100, 30 )
+custom_fonts/font = ExtResource( 4 )
+text = "OK"
+
+[node name="Label2" type="Label" parent="dlgCheck/VBoxContainer/HBoxContainer"]
+margin_left = 254.0
+margin_top = 1.0
+margin_right = 296.0
+margin_bottom = 31.0
+rect_min_size = Vector2( 30, 30 )
+size_flags_horizontal = 3
+
+[node name="btnNo" type="Button" parent="dlgCheck/VBoxContainer/HBoxContainer"]
+margin_left = 300.0
+margin_right = 400.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 100, 30 )
+custom_fonts/font = ExtResource( 4 )
+text = "NO"
+
+[connection signal="gui_input" from="HBoxContainer/Column1/Square11/HBoxContainer2/PanelContainer/HBoxContainer/Panel2/btn1111" to="." method="_on_btn1111_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square11/HBoxContainer2/PanelContainer/HBoxContainer/Panel3/btn1112" to="." method="_on_btn1112_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square11/HBoxContainer2/PanelContainer/HBoxContainer/Panel4/btn1113" to="." method="_on_btn1113_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square11/HBoxContainer2/PanelContainer/HBoxContainer/Panel5/btn1114" to="." method="_on_btn1114_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square11/HBoxContainer3/PanelContainer/HBoxContainer/Panel2/btn1121" to="." method="_on_btn1121_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square11/HBoxContainer3/PanelContainer/HBoxContainer/Panel3/btn1122" to="." method="_on_btn1122_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square11/HBoxContainer3/PanelContainer/HBoxContainer/Panel4/btn1123" to="." method="_on_btn1123_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square11/HBoxContainer3/PanelContainer/HBoxContainer/Panel5/btn1124" to="." method="_on_btn1124_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square11/HBoxContainer4/PanelContainer/HBoxContainer/Panel2/btn1131" to="." method="_on_btn1131_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square11/HBoxContainer4/PanelContainer/HBoxContainer/Panel3/btn1132" to="." method="_on_btn1132_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square11/HBoxContainer4/PanelContainer/HBoxContainer/Panel4/btn1133" to="." method="_on_btn1133_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square11/HBoxContainer4/PanelContainer/HBoxContainer/Panel5/btn1134" to="." method="_on_btn1134_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square11/HBoxContainer5/PanelContainer/HBoxContainer/Panel2/btn1141" to="." method="_on_btn1141_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square11/HBoxContainer5/PanelContainer/HBoxContainer/Panel3/btn1142" to="." method="_on_btn1142_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square11/HBoxContainer5/PanelContainer/HBoxContainer/Panel4/btn1143" to="." method="_on_btn1143_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square11/HBoxContainer5/PanelContainer/HBoxContainer/Panel5/btn1144" to="." method="_on_btn1144_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square21/HBoxContainer2/PanelContainer/HBoxContainer/Panel2/btn2111" to="." method="_on_btn2111_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square21/HBoxContainer2/PanelContainer/HBoxContainer/Panel3/btn2112" to="." method="_on_btn2112_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square21/HBoxContainer2/PanelContainer/HBoxContainer/Panel4/btn2113" to="." method="_on_btn2113_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square21/HBoxContainer2/PanelContainer/HBoxContainer/Panel5/btn2114" to="." method="_on_btn2114_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square21/HBoxContainer3/PanelContainer/HBoxContainer/Panel2/btn2121" to="." method="_on_btn2121_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square21/HBoxContainer3/PanelContainer/HBoxContainer/Panel3/btn2122" to="." method="_on_btn2122_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square21/HBoxContainer3/PanelContainer/HBoxContainer/Panel4/btn2123" to="." method="_on_btn2123_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square21/HBoxContainer3/PanelContainer/HBoxContainer/Panel5/btn2124" to="." method="_on_btn2124_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square21/HBoxContainer4/PanelContainer/HBoxContainer/Panel2/btn2131" to="." method="_on_btn2131_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square21/HBoxContainer4/PanelContainer/HBoxContainer/Panel3/btn2132" to="." method="_on_btn2132_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square21/HBoxContainer4/PanelContainer/HBoxContainer/Panel4/btn2133" to="." method="_on_btn2133_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square21/HBoxContainer4/PanelContainer/HBoxContainer/Panel5/btn2134" to="." method="_on_btn2134_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square21/HBoxContainer5/PanelContainer/HBoxContainer/Panel2/btn2141" to="." method="_on_btn2141_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square21/HBoxContainer5/PanelContainer/HBoxContainer/Panel3/btn2142" to="." method="_on_btn2142_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square21/HBoxContainer5/PanelContainer/HBoxContainer/Panel4/btn2143" to="." method="_on_btn2143_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square21/HBoxContainer5/PanelContainer/HBoxContainer/Panel5/btn2144" to="." method="_on_btn2144_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square31/HBoxContainer2/PanelContainer/HBoxContainer/Panel2/btn3111" to="." method="_on_btn3111_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square31/HBoxContainer2/PanelContainer/HBoxContainer/Panel3/btn3112" to="." method="_on_btn3112_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square31/HBoxContainer2/PanelContainer/HBoxContainer/Panel4/btn3113" to="." method="_on_btn3113_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square31/HBoxContainer2/PanelContainer/HBoxContainer/Panel5/btn3114" to="." method="_on_btn3114_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square31/HBoxContainer3/PanelContainer/HBoxContainer/Panel2/btn3121" to="." method="_on_btn3121_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square31/HBoxContainer3/PanelContainer/HBoxContainer/Panel3/btn3122" to="." method="_on_btn3122_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square31/HBoxContainer3/PanelContainer/HBoxContainer/Panel4/btn3123" to="." method="_on_btn3123_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square31/HBoxContainer3/PanelContainer/HBoxContainer/Panel5/btn3124" to="." method="_on_btn3124_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square31/HBoxContainer4/PanelContainer/HBoxContainer/Panel2/btn3131" to="." method="_on_btn3131_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square31/HBoxContainer4/PanelContainer/HBoxContainer/Panel3/btn3132" to="." method="_on_btn3132_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square31/HBoxContainer4/PanelContainer/HBoxContainer/Panel4/btn3133" to="." method="_on_btn3133_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square31/HBoxContainer4/PanelContainer/HBoxContainer/Panel5/btn3134" to="." method="_on_btn3134_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square31/HBoxContainer5/PanelContainer/HBoxContainer/Panel2/btn3141" to="." method="_on_btn3141_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square31/HBoxContainer5/PanelContainer/HBoxContainer/Panel3/btn3142" to="." method="_on_btn3142_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square31/HBoxContainer5/PanelContainer/HBoxContainer/Panel4/btn3143" to="." method="_on_btn3143_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square31/HBoxContainer5/PanelContainer/HBoxContainer/Panel5/btn3144" to="." method="_on_btn3144_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square41/HBoxContainer2/PanelContainer/HBoxContainer/Panel2/btn4111" to="." method="_on_btn4111_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square41/HBoxContainer2/PanelContainer/HBoxContainer/Panel3/btn4112" to="." method="_on_btn4112_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square41/HBoxContainer2/PanelContainer/HBoxContainer/Panel4/btn4113" to="." method="_on_btn4113_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square41/HBoxContainer2/PanelContainer/HBoxContainer/Panel5/btn4114" to="." method="_on_btn4114_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square41/HBoxContainer3/PanelContainer/HBoxContainer/Panel2/btn4121" to="." method="_on_btn4121_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square41/HBoxContainer3/PanelContainer/HBoxContainer/Panel3/btn4122" to="." method="_on_btn4122_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square41/HBoxContainer3/PanelContainer/HBoxContainer/Panel4/btn4123" to="." method="_on_btn4123_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square41/HBoxContainer3/PanelContainer/HBoxContainer/Panel5/btn4124" to="." method="_on_btn4124_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square41/HBoxContainer4/PanelContainer/HBoxContainer/Panel2/btn4131" to="." method="_on_btn4131_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square41/HBoxContainer4/PanelContainer/HBoxContainer/Panel3/btn4132" to="." method="_on_btn4132_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square41/HBoxContainer4/PanelContainer/HBoxContainer/Panel4/btn4133" to="." method="_on_btn4133_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square41/HBoxContainer4/PanelContainer/HBoxContainer/Panel5/btn4134" to="." method="_on_btn4134_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square41/HBoxContainer5/PanelContainer/HBoxContainer/Panel2/btn4141" to="." method="_on_btn4141_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square41/HBoxContainer5/PanelContainer/HBoxContainer/Panel3/btn4142" to="." method="_on_btn4142_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square41/HBoxContainer5/PanelContainer/HBoxContainer/Panel4/btn4143" to="." method="_on_btn4143_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column1/Square41/HBoxContainer5/PanelContainer/HBoxContainer/Panel5/btn4144" to="." method="_on_btn4144_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square12/HBoxContainer2/PanelContainer/HBoxContainer/Panel2/btn1211" to="." method="_on_btn1211_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square12/HBoxContainer2/PanelContainer/HBoxContainer/Panel3/btn1212" to="." method="_on_btn1212_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square12/HBoxContainer2/PanelContainer/HBoxContainer/Panel4/btn1213" to="." method="_on_btn1213_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square12/HBoxContainer2/PanelContainer/HBoxContainer/Panel5/btn1214" to="." method="_on_btn1214_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square12/HBoxContainer3/PanelContainer/HBoxContainer/Panel2/btn1221" to="." method="_on_btn1221_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square12/HBoxContainer3/PanelContainer/HBoxContainer/Panel3/btn1222" to="." method="_on_btn1222_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square12/HBoxContainer3/PanelContainer/HBoxContainer/Panel4/btn1223" to="." method="_on_btn1223_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square12/HBoxContainer3/PanelContainer/HBoxContainer/Panel5/btn1224" to="." method="_on_btn1224_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square12/HBoxContainer4/PanelContainer/HBoxContainer/Panel2/btn1231" to="." method="_on_btn1231_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square12/HBoxContainer4/PanelContainer/HBoxContainer/Panel3/btn1232" to="." method="_on_btn1232_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square12/HBoxContainer4/PanelContainer/HBoxContainer/Panel4/btn1233" to="." method="_on_btn1233_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square12/HBoxContainer4/PanelContainer/HBoxContainer/Panel5/btn1234" to="." method="_on_btn1234_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square12/HBoxContainer5/PanelContainer/HBoxContainer/Panel2/btn1241" to="." method="_on_btn1241_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square12/HBoxContainer5/PanelContainer/HBoxContainer/Panel3/btn1242" to="." method="_on_btn1242_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square12/HBoxContainer5/PanelContainer/HBoxContainer/Panel4/btn1243" to="." method="_on_btn1243_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square12/HBoxContainer5/PanelContainer/HBoxContainer/Panel5/btn1244" to="." method="_on_btn1244_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square22/HBoxContainer2/PanelContainer/HBoxContainer/Panel2/btn2211" to="." method="_on_btn2211_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square22/HBoxContainer2/PanelContainer/HBoxContainer/Panel3/btn2212" to="." method="_on_btn2212_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square22/HBoxContainer2/PanelContainer/HBoxContainer/Panel4/btn2213" to="." method="_on_btn2213_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square22/HBoxContainer2/PanelContainer/HBoxContainer/Panel5/btn2214" to="." method="_on_btn2214_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square22/HBoxContainer3/PanelContainer/HBoxContainer/Panel2/btn2221" to="." method="_on_btn2221_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square22/HBoxContainer3/PanelContainer/HBoxContainer/Panel3/btn2222" to="." method="_on_btn2222_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square22/HBoxContainer3/PanelContainer/HBoxContainer/Panel4/btn2223" to="." method="_on_btn2223_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square22/HBoxContainer3/PanelContainer/HBoxContainer/Panel5/btn2224" to="." method="_on_btn2224_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square22/HBoxContainer4/PanelContainer/HBoxContainer/Panel2/btn2231" to="." method="_on_btn2231_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square22/HBoxContainer4/PanelContainer/HBoxContainer/Panel3/btn2232" to="." method="_on_btn2232_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square22/HBoxContainer4/PanelContainer/HBoxContainer/Panel4/btn2233" to="." method="_on_btn2233_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square22/HBoxContainer4/PanelContainer/HBoxContainer/Panel5/btn2234" to="." method="_on_btn2234_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square22/HBoxContainer5/PanelContainer/HBoxContainer/Panel2/btn2241" to="." method="_on_btn2241_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square22/HBoxContainer5/PanelContainer/HBoxContainer/Panel3/btn2242" to="." method="_on_btn2242_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square22/HBoxContainer5/PanelContainer/HBoxContainer/Panel4/btn2243" to="." method="_on_btn2243_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square22/HBoxContainer5/PanelContainer/HBoxContainer/Panel5/btn2244" to="." method="_on_btn2244_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square32/HBoxContainer2/PanelContainer/HBoxContainer/Panel2/btn3211" to="." method="_on_btn3211_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square32/HBoxContainer2/PanelContainer/HBoxContainer/Panel3/btn3212" to="." method="_on_btn3212_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square32/HBoxContainer2/PanelContainer/HBoxContainer/Panel4/btn3213" to="." method="_on_btn3213_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square32/HBoxContainer2/PanelContainer/HBoxContainer/Panel5/btn3214" to="." method="_on_btn3214_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square32/HBoxContainer3/PanelContainer/HBoxContainer/Panel2/btn3221" to="." method="_on_btn3221_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square32/HBoxContainer3/PanelContainer/HBoxContainer/Panel3/btn3222" to="." method="_on_btn3222_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square32/HBoxContainer3/PanelContainer/HBoxContainer/Panel4/btn3223" to="." method="_on_btn3223_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square32/HBoxContainer3/PanelContainer/HBoxContainer/Panel5/btn3224" to="." method="_on_btn3224_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square32/HBoxContainer4/PanelContainer/HBoxContainer/Panel2/btn3231" to="." method="_on_btn3231_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square32/HBoxContainer4/PanelContainer/HBoxContainer/Panel3/btn3232" to="." method="_on_btn3232_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square32/HBoxContainer4/PanelContainer/HBoxContainer/Panel4/btn3233" to="." method="_on_btn3233_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square32/HBoxContainer4/PanelContainer/HBoxContainer/Panel5/btn3234" to="." method="_on_btn3234_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square32/HBoxContainer5/PanelContainer/HBoxContainer/Panel2/btn3241" to="." method="_on_btn3241_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square32/HBoxContainer5/PanelContainer/HBoxContainer/Panel3/btn3242" to="." method="_on_btn3242_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square32/HBoxContainer5/PanelContainer/HBoxContainer/Panel4/btn3243" to="." method="_on_btn3243_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column2/Square32/HBoxContainer5/PanelContainer/HBoxContainer/Panel5/btn3244" to="." method="_on_btn3244_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square13/HBoxContainer2/PanelContainer/HBoxContainer/Panel2/btn1311" to="." method="_on_btn1311_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square13/HBoxContainer2/PanelContainer/HBoxContainer/Panel3/btn1312" to="." method="_on_btn1312_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square13/HBoxContainer2/PanelContainer/HBoxContainer/Panel4/btn1313" to="." method="_on_btn1313_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square13/HBoxContainer2/PanelContainer/HBoxContainer/Panel5/btn1314" to="." method="_on_btn1314_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square13/HBoxContainer3/PanelContainer/HBoxContainer/Panel2/btn1321" to="." method="_on_btn1321_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square13/HBoxContainer3/PanelContainer/HBoxContainer/Panel3/btn1322" to="." method="_on_btn1322_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square13/HBoxContainer3/PanelContainer/HBoxContainer/Panel4/btn1323" to="." method="_on_btn1323_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square13/HBoxContainer3/PanelContainer/HBoxContainer/Panel5/btn1324" to="." method="_on_btn1324_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square13/HBoxContainer4/PanelContainer/HBoxContainer/Panel2/btn1331" to="." method="_on_btn1331_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square13/HBoxContainer4/PanelContainer/HBoxContainer/Panel3/btn1332" to="." method="_on_btn1332_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square13/HBoxContainer4/PanelContainer/HBoxContainer/Panel4/btn1333" to="." method="_on_btn1333_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square13/HBoxContainer4/PanelContainer/HBoxContainer/Panel5/btn1334" to="." method="_on_btn1334_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square13/HBoxContainer5/PanelContainer/HBoxContainer/Panel2/btn1341" to="." method="_on_btn1341_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square13/HBoxContainer5/PanelContainer/HBoxContainer/Panel3/btn1342" to="." method="_on_btn1342_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square13/HBoxContainer5/PanelContainer/HBoxContainer/Panel4/btn1343" to="." method="_on_btn1343_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square13/HBoxContainer5/PanelContainer/HBoxContainer/Panel5/btn1344" to="." method="_on_btn1344_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square23/HBoxContainer2/PanelContainer/HBoxContainer/Panel2/btn2311" to="." method="_on_btn2311_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square23/HBoxContainer2/PanelContainer/HBoxContainer/Panel3/btn2312" to="." method="_on_btn2312_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square23/HBoxContainer2/PanelContainer/HBoxContainer/Panel4/btn2313" to="." method="_on_btn2313_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square23/HBoxContainer2/PanelContainer/HBoxContainer/Panel5/btn2314" to="." method="_on_btn2314_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square23/HBoxContainer3/PanelContainer/HBoxContainer/Panel2/btn2321" to="." method="_on_btn2321_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square23/HBoxContainer3/PanelContainer/HBoxContainer/Panel3/btn2322" to="." method="_on_btn2322_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square23/HBoxContainer3/PanelContainer/HBoxContainer/Panel4/btn2323" to="." method="_on_btn2323_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square23/HBoxContainer3/PanelContainer/HBoxContainer/Panel5/btn2324" to="." method="_on_btn2324_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square23/HBoxContainer4/PanelContainer/HBoxContainer/Panel2/btn2331" to="." method="_on_btn2331_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square23/HBoxContainer4/PanelContainer/HBoxContainer/Panel3/btn2332" to="." method="_on_btn2332_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square23/HBoxContainer4/PanelContainer/HBoxContainer/Panel4/btn2333" to="." method="_on_btn2333_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square23/HBoxContainer4/PanelContainer/HBoxContainer/Panel5/btn2334" to="." method="_on_btn2334_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square23/HBoxContainer5/PanelContainer/HBoxContainer/Panel2/btn2341" to="." method="_on_btn2341_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square23/HBoxContainer5/PanelContainer/HBoxContainer/Panel3/btn2342" to="." method="_on_btn2342_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square23/HBoxContainer5/PanelContainer/HBoxContainer/Panel4/btn2343" to="." method="_on_btn2343_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column3/Square23/HBoxContainer5/PanelContainer/HBoxContainer/Panel5/btn2344" to="." method="_on_btn2344_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column4/Square14/HBoxContainer2/PanelContainer/HBoxContainer/Panel2/btn1411" to="." method="_on_btn1411_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column4/Square14/HBoxContainer2/PanelContainer/HBoxContainer/Panel3/btn1412" to="." method="_on_btn1412_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column4/Square14/HBoxContainer2/PanelContainer/HBoxContainer/Panel4/btn1413" to="." method="_on_btn1413_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column4/Square14/HBoxContainer2/PanelContainer/HBoxContainer/Panel5/btn1414" to="." method="_on_btn1414_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column4/Square14/HBoxContainer3/PanelContainer/HBoxContainer/Panel2/btn1421" to="." method="_on_btn1421_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column4/Square14/HBoxContainer3/PanelContainer/HBoxContainer/Panel3/btn1422" to="." method="_on_btn1422_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column4/Square14/HBoxContainer3/PanelContainer/HBoxContainer/Panel4/btn1423" to="." method="_on_btn1423_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column4/Square14/HBoxContainer3/PanelContainer/HBoxContainer/Panel5/btn1424" to="." method="_on_btn1424_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column4/Square14/HBoxContainer4/PanelContainer/HBoxContainer/Panel2/btn1431" to="." method="_on_btn1431_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column4/Square14/HBoxContainer4/PanelContainer/HBoxContainer/Panel3/btn1432" to="." method="_on_btn1432_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column4/Square14/HBoxContainer4/PanelContainer/HBoxContainer/Panel4/btn1433" to="." method="_on_btn1433_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column4/Square14/HBoxContainer4/PanelContainer/HBoxContainer/Panel5/btn1434" to="." method="_on_btn1434_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column4/Square14/HBoxContainer5/PanelContainer/HBoxContainer/Panel2/btn1441" to="." method="_on_btn1441_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column4/Square14/HBoxContainer5/PanelContainer/HBoxContainer/Panel3/btn1442" to="." method="_on_btn1442_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column4/Square14/HBoxContainer5/PanelContainer/HBoxContainer/Panel4/btn1443" to="." method="_on_btn1443_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/Column4/Square14/HBoxContainer5/PanelContainer/HBoxContainer/Panel5/btn1444" to="." method="_on_btn1444_gui_input"]
+[connection signal="pressed" from="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer2/btnSupp" to="." method="_on_btnSupp_pressed"]
+[connection signal="pressed" from="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer/btnCheck" to="." method="_on_btnCheck_pressed"]
+[connection signal="pressed" from="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer/btnQuit" to="." method="_on_btnQuit_pressed"]
+[connection signal="pressed" from="dlgCheck/VBoxContainer/HBoxContainer/btnYes" to="." method="_on_btnYes_pressed"]
+[connection signal="pressed" from="dlgCheck/VBoxContainer/HBoxContainer/btnOK" to="." method="_on_btnOK_pressed"]
+[connection signal="pressed" from="dlgCheck/VBoxContainer/HBoxContainer/btnNo" to="." method="_on_btnNo_pressed"]
