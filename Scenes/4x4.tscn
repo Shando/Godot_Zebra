@@ -4318,20 +4318,35 @@ margin_bottom = 100.0
 
 [node name="Label" type="Label" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer2"]
 margin_top = 43.0
-margin_right = 171.0
+margin_right = 65.0
 margin_bottom = 57.0
 size_flags_horizontal = 3
 
 [node name="btnSupp" type="Button" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer2"]
-margin_left = 175.0
-margin_right = 525.0
+margin_left = 69.0
+margin_right = 306.0
 margin_bottom = 100.0
-rect_min_size = Vector2( 350, 100 )
+rect_min_size = Vector2( 200, 100 )
 custom_fonts/font = ExtResource( 3 )
-text = "GET MORE CLUES"
+text = "MORE CLUES"
 
 [node name="Label2" type="Label" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer2"]
-margin_left = 529.0
+margin_left = 310.0
+margin_right = 376.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+
+[node name="btnGiveUp" type="Button" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer2"]
+margin_left = 380.0
+margin_right = 630.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 250, 100 )
+custom_fonts/font = ExtResource( 3 )
+text = "I GIVE UP!"
+
+[node name="Label3" type="Label" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer2"]
+margin_left = 634.0
 margin_right = 700.0
 margin_bottom = 100.0
 size_flags_horizontal = 3
@@ -4640,6 +4655,7 @@ text = "NO"
 [connection signal="gui_input" from="HBoxContainer/Column4/Square14/HBoxContainer5/PanelContainer/HBoxContainer/Panel4/btn1443" to="." method="_on_btn1443_gui_input"]
 [connection signal="gui_input" from="HBoxContainer/Column4/Square14/HBoxContainer5/PanelContainer/HBoxContainer/Panel5/btn1444" to="." method="_on_btn1444_gui_input"]
 [connection signal="pressed" from="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer2/btnSupp" to="." method="_on_btnSupp_pressed"]
+[connection signal="pressed" from="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer2/btnGiveUp" to="." method="_on_btnGiveUp_pressed"]
 [connection signal="pressed" from="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer/btnCheck" to="." method="_on_btnCheck_pressed"]
 [connection signal="pressed" from="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer/btnQuit" to="." method="_on_btnQuit_pressed"]
 [connection signal="pressed" from="dlgCheck/VBoxContainer/HBoxContainer/btnYes" to="." method="_on_btnYes_pressed"]

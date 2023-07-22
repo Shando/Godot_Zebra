@@ -4,7 +4,6 @@ var puzzle = ""	# Puzzle Generated Text from 'generate.py'
 var sText1 = ""	# Basic Description
 var aText = []	# Each Element
 var aClues = []	# Each Clue
-var aSol = []	# Each Solution
 var aOne = []	# 1st Element
 var aTwo = []	# 2nd Element
 var aThree = []	# 3rd Element
@@ -36,7 +35,7 @@ func _started():
 	sText1 = ""	# Basic Description
 	aText = []	# Each Element
 	aClues = []	# Each Clue
-	aSol = []	# Each Solution
+	Common.aSol = []	# Each Solution
 	aOne = []	# 1st Element
 	aTwo = []	# 2nd Element
 	aThree = []	# 3rd Element
@@ -99,7 +98,7 @@ func load5x5(stdOut):
 	aText = []			# Each Element
 	aClues = []			# Each Clue
 	Common.aSupp = []	# Each Supplemental Clue
-	aSol = []			# Each Solution
+	Common.aSol = []			# Each Solution
 	Common.aSolution = []
 
 	var myStr = puzzle.split("\n", false)
@@ -145,12 +144,12 @@ func load5x5(stdOut):
 
 	for x in range(iTmp, myStr.size() - 1):
 		if myStr[x].left(1) == "-":
-			aSol.append(myStr[x].right(2))
+			Common.aSol.append(myStr[x].right(2))
 
 	var sPath = ""
 
 	for x in range(5):
-		var sT = aSol[x].split(".")
+		var sT = Common.aSol[x].split(".")
 		sTmp = sT[0].strip_edges()
 		sTmp = sTmp.capitalize()
 
@@ -173,22 +172,22 @@ func load5x5(stdOut):
 			sTmp = "House"
 		elif x == 4:
 			sPath = "Control/HBoxContainer/Column2/Panel/TopLabel1"
-			sT = aSol[x].split(".")
+			sT = Common.aSol[x].split(".")
 			sTmp = sT[0].strip_edges()
 			sTmp = sTmp.capitalize()
 		elif x == 3:
 			sPath = "Control/HBoxContainer/Column3/Panel/TopLabel1"
-			sT = aSol[x].split(".")
+			sT = Common.aSol[x].split(".")
 			sTmp = sT[0].strip_edges()
 			sTmp = sTmp.capitalize()
 		elif x == 2:
 			sPath = "Control/HBoxContainer/Column4/Panel/TopLabel1"
-			sT = aSol[x].split(".")
+			sT = Common.aSol[x].split(".")
 			sTmp = sT[0].strip_edges()
 			sTmp = sTmp.capitalize()
 		else:
 			sPath = "Control/HBoxContainer/Column5/Panel/TopLabel1"
-			sT = aSol[x].split(".")
+			sT = Common.aSol[x].split(".")
 			sTmp = sT[0].strip_edges()
 			sTmp = sTmp.capitalize()
 
@@ -203,7 +202,7 @@ func load5x5(stdOut):
 	for x in range(5):
 		for y in range(5):
 			iTmp = x * 5 + y
-			var sT = aSol[iTmp].split(".")
+			var sT = Common.aSol[iTmp].split(".")
 			sTmp = sT[1].strip_edges()
 			sTmp = sTmp.capitalize()
 
@@ -315,8 +314,8 @@ func load5x5(stdOut):
 	var u = 0
 
 	for x in range(5):
-		for y in range(0, aSol.size(), 5):
-			var sT1 = aSol[y].split(".")
+		for y in range(0, Common.aSol.size(), 5):
+			var sT1 = Common.aSol[y].split(".")
 			sTmp = sT1[1].strip_edges()
 			sTmp = sTmp.capitalize()
 
@@ -325,7 +324,7 @@ func load5x5(stdOut):
 				u = int(y / 5) + 1
 				sT = "11" + str(x + 1) + str(u)
 				Common.aSolution.append(sT)
-				sT1 = aSol[y + 4].split(".")
+				sT1 = Common.aSol[y + 4].split(".")
 				sTmp = sT1[1].strip_edges()
 				sTmp = sTmp.capitalize()
 
@@ -334,7 +333,7 @@ func load5x5(stdOut):
 						sT = "12" + str(x + 1) + str(z + 1) 
 						Common.aSolution.append(sT)
 
-				sT1 = aSol[y + 3].split(".")
+				sT1 = Common.aSol[y + 3].split(".")
 				sTmp = sT1[1].strip_edges()
 				sTmp = sTmp.capitalize()
 
@@ -343,7 +342,7 @@ func load5x5(stdOut):
 						sT = "13" + str(x + 1) + str(z + 1) 
 						Common.aSolution.append(sT)
 
-				sT1 = aSol[y + 2].split(".")
+				sT1 = Common.aSol[y + 2].split(".")
 				sTmp = sT1[1].strip_edges()
 				sTmp = sTmp.capitalize()
 
@@ -352,7 +351,7 @@ func load5x5(stdOut):
 						sT = "14" + str(x + 1) + str(z + 1) 
 						Common.aSolution.append(sT)
 
-				sT1 = aSol[y + 1].split(".")
+				sT1 = Common.aSol[y + 1].split(".")
 				sTmp = sT1[1].strip_edges()
 				sTmp = sTmp.capitalize()
 
@@ -362,8 +361,8 @@ func load5x5(stdOut):
 						Common.aSolution.append(sT)
 
 	for x in range(5):
-		for y in range(1, aSol.size(), 5):
-			var sT1 = aSol[y].split(".")
+		for y in range(1, Common.aSol.size(), 5):
+			var sT1 = Common.aSol[y].split(".")
 			sTmp = sT1[1].strip_edges()
 			sTmp = sTmp.capitalize()
 
@@ -373,7 +372,7 @@ func load5x5(stdOut):
 				sT = "21" + str(x + 1) + str(u)
 				Common.aSolution.append(sT)
 
-				sT1 = aSol[y + 3].split(".")
+				sT1 = Common.aSol[y + 3].split(".")
 				sTmp = sT1[1].strip_edges()
 				sTmp = sTmp.capitalize()
 
@@ -382,7 +381,7 @@ func load5x5(stdOut):
 						sT = "22" + str(x + 1) + str(z + 1) 
 						Common.aSolution.append(sT)
 
-				sT1 = aSol[y + 2].split(".")
+				sT1 = Common.aSol[y + 2].split(".")
 				sTmp = sT1[1].strip_edges()
 				sTmp = sTmp.capitalize()
 
@@ -391,7 +390,7 @@ func load5x5(stdOut):
 						sT = "23" + str(x + 1) + str(z + 1) 
 						Common.aSolution.append(sT)
 
-				sT1 = aSol[y + 1].split(".")
+				sT1 = Common.aSol[y + 1].split(".")
 				sTmp = sT1[1].strip_edges()
 				sTmp = sTmp.capitalize()
 
@@ -401,8 +400,8 @@ func load5x5(stdOut):
 						Common.aSolution.append(sT)
 
 	for x in range(5):
-		for y in range(2, aSol.size(), 5):
-			var sT1 = aSol[y].split(".")
+		for y in range(2, Common.aSol.size(), 5):
+			var sT1 = Common.aSol[y].split(".")
 			sTmp = sT1[1].strip_edges()
 			sTmp = sTmp.capitalize()
 
@@ -412,7 +411,7 @@ func load5x5(stdOut):
 				sT = "31" + str(x + 1) + str(u)
 				Common.aSolution.append(sT)
 
-				sT1 = aSol[y + 2].split(".")
+				sT1 = Common.aSol[y + 2].split(".")
 				sTmp = sT1[1].strip_edges()
 				sTmp = sTmp.capitalize()
 
@@ -421,7 +420,7 @@ func load5x5(stdOut):
 						sT = "32" + str(x + 1) + str(z + 1) 
 						Common.aSolution.append(sT)
 
-				sT1 = aSol[y + 1].split(".")
+				sT1 = Common.aSol[y + 1].split(".")
 				sTmp = sT1[1].strip_edges()
 				sTmp = sTmp.capitalize()
 
@@ -432,8 +431,8 @@ func load5x5(stdOut):
 
 
 	for x in range(5):
-		for y in range(3, aSol.size(), 5):
-			var sT1 = aSol[y].split(".")
+		for y in range(3, Common.aSol.size(), 5):
+			var sT1 = Common.aSol[y].split(".")
 			sTmp = sT1[1].strip_edges()
 			sTmp = sTmp.capitalize()
 
@@ -443,7 +442,7 @@ func load5x5(stdOut):
 				sT = "41" + str(x + 1) + str(u)
 				Common.aSolution.append(sT)
 
-				sT1 = aSol[y + 1].split(".")
+				sT1 = Common.aSol[y + 1].split(".")
 				sTmp = sT1[1].strip_edges()
 				sTmp = sTmp.capitalize()
 
@@ -453,8 +452,8 @@ func load5x5(stdOut):
 						Common.aSolution.append(sT)
 
 	for x in range(5):
-		for y in range(4, aSol.size(), 5):
-			var sT1 = aSol[y].split(".")
+		for y in range(4, Common.aSol.size(), 5):
+			var sT1 = Common.aSol[y].split(".")
 			sTmp = sT1[1].strip_edges()
 			sTmp = sTmp.capitalize()
 
@@ -471,7 +470,7 @@ func load4x4(stdOut):
 	aText = []			# Each Element
 	aClues = []			# Each Clue
 	Common.aSupp = []	# Each Supplemental Clue
-	aSol = []			# Each Solution
+	Common.aSol = []	# Each Solution
 	Common.aSolution = []
 
 	var myStr = puzzle.split("\n", false)
@@ -517,12 +516,12 @@ func load4x4(stdOut):
 
 	for x in range(iTmp, myStr.size() - 1):
 		if myStr[x].left(1) == "-":
-			aSol.append(myStr[x].right(2))
+			Common.aSol.append(myStr[x].right(2))
 
 	var sPath = ""
 
 	for x in range(4):
-		var sT = aSol[x].split(".")
+		var sT = Common.aSol[x].split(".")
 		sTmp = sT[0].strip_edges()
 		sTmp = sTmp.capitalize()
 
@@ -543,17 +542,17 @@ func load4x4(stdOut):
 			sTmp = "House"
 		elif x == 3:
 			sPath = "Control/HBoxContainer/Column2/Panel/TopLabel1"
-			sT = aSol[x].split(".")
+			sT = Common.aSol[x].split(".")
 			sTmp = sT[0].strip_edges()
 			sTmp = sTmp.capitalize()
 		elif x == 2:
 			sPath = "Control/HBoxContainer/Column3/Panel/TopLabel1"
-			sT = aSol[x].split(".")
+			sT = Common.aSol[x].split(".")
 			sTmp = sT[0].strip_edges()
 			sTmp = sTmp.capitalize()
 		else:
 			sPath = "Control/HBoxContainer/Column4/Panel/TopLabel1"
-			sT = aSol[x].split(".")
+			sT = Common.aSol[x].split(".")
 			sTmp = sT[0].strip_edges()
 			sTmp = sTmp.capitalize()
 
@@ -568,7 +567,7 @@ func load4x4(stdOut):
 	for x in range(4):
 		for y in range(4):
 			iTmp = x * 4 + y
-			var sT = aSol[iTmp].split(".")
+			var sT = Common.aSol[iTmp].split(".")
 			sTmp = sT[1].strip_edges()
 			sTmp = sTmp.capitalize()
 
@@ -664,8 +663,8 @@ func load4x4(stdOut):
 	var u = 0
 
 	for x in range(4):
-		for y in range(0, aSol.size(), 4):
-			var sT1 = aSol[y].split(".")
+		for y in range(0, Common.aSol.size(), 4):
+			var sT1 = Common.aSol[y].split(".")
 			sTmp = sT1[1].strip_edges()
 			sTmp = sTmp.capitalize()
 
@@ -674,7 +673,7 @@ func load4x4(stdOut):
 				u = int(y / 4) + 1
 				sT = "11" + str(x + 1) + str(u)
 				Common.aSolution.append(sT)
-				sT1 = aSol[y + 3].split(".")
+				sT1 = Common.aSol[y + 3].split(".")
 				sTmp = sT1[1].strip_edges()
 				sTmp = sTmp.capitalize()
 
@@ -683,7 +682,7 @@ func load4x4(stdOut):
 						sT = "12" + str(x + 1) + str(z + 1) 
 						Common.aSolution.append(sT)
 
-				sT1 = aSol[y + 2].split(".")
+				sT1 = Common.aSol[y + 2].split(".")
 				sTmp = sT1[1].strip_edges()
 				sTmp = sTmp.capitalize()
 
@@ -692,7 +691,7 @@ func load4x4(stdOut):
 						sT = "13" + str(x + 1) + str(z + 1) 
 						Common.aSolution.append(sT)
 
-				sT1 = aSol[y + 1].split(".")
+				sT1 = Common.aSol[y + 1].split(".")
 				sTmp = sT1[1].strip_edges()
 				sTmp = sTmp.capitalize()
 
@@ -702,8 +701,8 @@ func load4x4(stdOut):
 						Common.aSolution.append(sT)
 
 	for x in range(4):
-		for y in range(1, aSol.size(), 4):
-			var sT1 = aSol[y].split(".")
+		for y in range(1, Common.aSol.size(), 4):
+			var sT1 = Common.aSol[y].split(".")
 			sTmp = sT1[1].strip_edges()
 			sTmp = sTmp.capitalize()
 
@@ -713,7 +712,7 @@ func load4x4(stdOut):
 				sT = "21" + str(x + 1) + str(u)
 				Common.aSolution.append(sT)
 
-				sT1 = aSol[y + 2].split(".")
+				sT1 = Common.aSol[y + 2].split(".")
 				sTmp = sT1[1].strip_edges()
 				sTmp = sTmp.capitalize()
 
@@ -722,7 +721,7 @@ func load4x4(stdOut):
 						sT = "22" + str(x + 1) + str(z + 1) 
 						Common.aSolution.append(sT)
 
-				sT1 = aSol[y + 1].split(".")
+				sT1 = Common.aSol[y + 1].split(".")
 				sTmp = sT1[1].strip_edges()
 				sTmp = sTmp.capitalize()
 
@@ -732,8 +731,8 @@ func load4x4(stdOut):
 						Common.aSolution.append(sT)
 
 	for x in range(4):
-		for y in range(2, aSol.size(), 4):
-			var sT1 = aSol[y].split(".")
+		for y in range(2, Common.aSol.size(), 4):
+			var sT1 = Common.aSol[y].split(".")
 			sTmp = sT1[1].strip_edges()
 			sTmp = sTmp.capitalize()
 
@@ -743,7 +742,7 @@ func load4x4(stdOut):
 				sT = "31" + str(x + 1) + str(u)
 				Common.aSolution.append(sT)
 
-				sT1 = aSol[y + 1].split(".")
+				sT1 = Common.aSol[y + 1].split(".")
 				sTmp = sT1[1].strip_edges()
 				sTmp = sTmp.capitalize()
 
@@ -753,8 +752,8 @@ func load4x4(stdOut):
 						Common.aSolution.append(sT)
 
 	for x in range(4):
-		for y in range(3, aSol.size(), 4):
-			var sT1 = aSol[y].split(".")
+		for y in range(3, Common.aSol.size(), 4):
+			var sT1 = Common.aSol[y].split(".")
 			sTmp = sT1[1].strip_edges()
 			sTmp = sTmp.capitalize()
 
@@ -765,7 +764,7 @@ func load4x4(stdOut):
 				Common.aSolution.append(sT)
 
 	print(Common.aSolution)
-	print(aSol)
+	print(Common.aSol)
 #	print(puzzle)
 
 func _on_btnStart_pressed():

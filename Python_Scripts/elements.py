@@ -305,7 +305,7 @@ class Male(PuzzleElement):
 	def description(cls):
 		return "Each is accompanied by their partner"
 
-	eric = "Erid"
+	eric = "Eric"
 	fred = "Fred"
 	john = "John"
 	paul = "Paul"

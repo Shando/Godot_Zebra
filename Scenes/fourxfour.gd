@@ -326,6 +326,42 @@ func _on_btnSupp_pressed():
 	time_elapsed += 30
 	$HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer2/btnSupp.disabled = true
 
+func _on_btnGiveUp_pressed():
+	$HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer2/btnSupp.disabled = true
+	$HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer2/btnGiveUp.disabled = true
+	$HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer/btnCheck.disabled = true
+
+	bTimer = false
+	var iT = 0
+	var sT1 = "SOLUTION:\n\n"
+	var sT = ""
+	var sTmp = ""
+
+	for x in range(4):
+		# [Female.penny, Egg.golden, Tribe.volcano, Smoothie.lime, 
+		# Female.robyn, Egg.marinodon, Tribe.quake, Smoothie.earth,
+		# Female.emma, Egg.crystal, Tribe.forest, Smoothie.dawn,
+		# Female.holly, Egg.topaz, Tribe.storm, Smoothie.blueberry]
+		iT = x * 4
+
+		if x == 0:
+			sT1 = sT1 + "HOUSE 1:\n"
+		elif x == 1:
+			sT1 = sT1 + "\nHOUSE 2:\n"
+		elif x == 2:
+			sT1 = sT1 + "\nHOUSE 3:\n"
+		else:
+			sT1 = sT1 + "\nHOUSE 4:\n"
+
+		for y in range(4):
+			sT = Common.aSol[iT + y].split(".")
+			sTmp = sT[0].strip_edges().capitalize()
+			sT1 = sT1 + sTmp + " = "
+			sTmp = sT[1].strip_edges().capitalize()
+			sT1 = sT1 + sTmp + "\n"
+
+		$HBoxContainer/CluesAndButtons/Clues.set_bbcode(sT1)
+
 func _on_btnCheck_pressed():
 	var bOK = true
 	bTimer = false
