@@ -26,12 +26,18 @@ func _process(delta):
 			$dlgCheck.hide()
 
 			if iDlgType == 1:
-				get_tree().quit()
+				get_tree().get_root().get_node("Main/VBoxContainer").show()
+				var node = get_tree().get_root().get_node("Control")
+				get_tree().get_root().remove_child(node)
+
+			iDlgType = 0
 		elif bDlgNo:
 			bDlg = false
+			iDlgType = 0
 			$dlgCheck.hide()
 		elif bDlgOK:
 			bDlg = false
+			iDlgType = 0
 			$dlgCheck.hide()
 
 func seconds2hhmmss(total_seconds):
@@ -42,6 +48,9 @@ func seconds2hhmmss(total_seconds):
 	return hhmmss_string
 
 func allReady():
+	Common.aSolution = []
+	Common.aSupp = []
+	Common.clueText = ""
 	clearBoard()
 	bTimer = true
 	bDlgYes = false
@@ -314,7 +323,8 @@ func _on_btnSupp_pressed():
 	for x in Common.aSupp:
 		sTxt = sTxt + x + "\n"
 
-	node.append_bbcode(sTxt)
+	Common.clueText = node.get_bbcode() + sTxt
+	node.set_bbcode(Common.clueText)
 	time_elapsed += 30
 	$HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer2/btnSupp.disabled = true
 
@@ -1492,6 +1502,9 @@ func updateDlg(inHeader, inContent, inType, bYes, bNo, bOK):
 	else:
 		$dlgCheck/VBoxContainer/HBoxContainer/btnNo.visible = false
 
+	bDlgYes = false
+	bDlgNo = false
+	bDlgOK = false
 	$dlgCheck.show()
 
 # dlgCheck Buttons

@@ -294,7 +294,9 @@ def main(params):
 	puzzle_size = int(params[0])
 
 	random.shuffle(element_types1)
-	element_types = [element_types1.pop() for _ in range(puzzle_size)]
+	
+	for _ in range(puzzle_size):
+		element_types.append(element_types1.pop())
 
 	if element_types[0] == Male:
 		element_types[0] = Female

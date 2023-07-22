@@ -12,6 +12,11 @@ var aFour = []	# 4th Element
 var aFive = []	# 5th Element
 var iSize = 4
 var bEasy = true
+var bDlgYes = false
+var bDlgNo = false
+var bDlgOK = false
+var bDlg = false
+var iDlgType = 0	# 1 == QUIT, 2 == OTHER
 
 var scene5x5 = preload("res://Scenes/5x5.tscn").instance()
 var scene4x4 = preload("res://Scenes/4x4.tscn").instance()
@@ -22,6 +27,21 @@ func _ready():
 
 func _started():
 	randomize()
+	bDlgYes = false
+	bDlgNo = false
+	bDlgOK = false
+	bDlg = false
+
+	puzzle = ""	# Puzzle Generated Text from 'generate.py'
+	sText1 = ""	# Basic Description
+	aText = []	# Each Element
+	aClues = []	# Each Clue
+	aSol = []	# Each Solution
+	aOne = []	# 1st Element
+	aTwo = []	# 2nd Element
+	aThree = []	# 3rd Element
+	aFour = []	# 4th Element
+	aFive = []	# 5th Element
 	var stdout = []
 	var path = "//addons//pythonscript//windows-64//python.exe"
 
@@ -52,6 +72,25 @@ func _started():
 	else:
 		# TODO: GENERATE ERROR MESSAGE
 		pass
+
+func _process(_delta):
+	if bDlg:
+		if bDlgYes:
+			bDlg = false
+			$dlgCheck.hide()
+
+			if iDlgType == 1:
+				get_tree().quit()
+			else:
+				iDlgType = 0
+		elif bDlgNo:
+			bDlg = false
+			iDlgType = 0
+			$dlgCheck.hide()
+		elif bDlgOK:
+			bDlg = false
+			iDlgType = 0
+			$dlgCheck.hide()
 
 func load5x5(stdOut):
 	puzzle = str(stdOut)
@@ -738,10 +777,53 @@ func _on_btnStart_pressed():
 	_started()
 
 func _on_btnQuit_pressed():
-	pass # Replace with function body.
+	updateDlg("Are you sure?", "Are you sure you want to exit the game?", 1, true, true, false)
 
 func _on_cbEasy_pressed():
 	bEasy = true
 
 func _on_cbHard_pressed():
 	bEasy = false
+
+# Dialog
+func updateDlg(inHeader, inContent, inType, bYes, bNo, bOK):
+	bDlg = true
+	iDlgType = inType
+	$dlgCheck/VBoxContainer/Header.bbcode_text = "[center]" + inHeader
+	$dlgCheck/VBoxContainer/Content.bbcode_text = "[center][valign px=-18]" + inContent
+
+	if bYes:
+		$dlgCheck/VBoxContainer/HBoxContainer/btnYes.visible = true
+	else:
+		$dlgCheck/VBoxContainer/HBoxContainer/btnYes.visible = false
+
+	if bOK:
+		$dlgCheck/VBoxContainer/HBoxContainer/btnOK.visible = true
+	else:
+		$dlgCheck/VBoxContainer/HBoxContainer/btnOK.visible = false
+
+	if bNo:
+		$dlgCheck/VBoxContainer/HBoxContainer/btnNo.visible = true
+	else:
+		$dlgCheck/VBoxContainer/HBoxContainer/btnNo.visible = false
+
+	bDlgYes = false
+	bDlgNo = false
+	bDlgOK = false
+	$dlgCheck.show()
+
+# dlgCheck Buttons
+func _on_btnYes_pressed():
+	bDlgYes = true
+	bDlgNo = false
+	bDlgOK = false
+
+func _on_btnOK_pressed():
+	bDlgYes = false
+	bDlgNo = false
+	bDlgOK = true
+
+func _on_btnNo_pressed():
+	bDlgYes = false
+	bDlgNo = true
+	bDlgOK = false
