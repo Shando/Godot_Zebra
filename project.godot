@@ -29,6 +29,10 @@ config/icon="res://icon.png"
 autoloadpy="*res://autoload.py"
 Common="*res://Scripts/common.gd"
 
+[debug]
+
+settings/stdout/verbose_stdout=true
+
 [display]
 
 window/size/width=1680

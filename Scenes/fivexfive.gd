@@ -26,6 +26,7 @@ func _process(delta):
 			$dlgCheck.hide()
 
 			if iDlgType == 1:
+				clearBoard()
 				get_tree().get_root().get_node("Main/VBoxContainer").show()
 				var node = get_tree().get_root().get_node("Control")
 				get_tree().get_root().remove_child(node)
@@ -72,6 +73,12 @@ func clearBoard():
 	var sTmp = ""
 	var sTmp1 = ""
 	var sTmp2 = ""
+	time_elapsed = 0
+	bTimer = true
+
+	$HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer2/btnSupp.disabled = false
+	$HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer2/btnGiveUp.disabled = false
+	$HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer/btnCheck.disabled = false
 
 	# Clues
 	$HBoxContainer/CluesAndButtons/Clues.bbcode_text = " CLUES:\n Clue 1:"
@@ -156,164 +163,118 @@ func setCell(inS, inType, inNode):
 	elif inType == 1:
 		tBtns[inS] = "tick"
 		sTex = "res://Textures/tick.png"
-	else:
+	elif inType == 2:
 		tBtns[inS] = "cross"
+		sTex = "res://Textures/cross.png"
+	else:
+		tBtns[inS] = "tcross"	# this is for crosses placed by ticks!
 		sTex = "res://Textures/cross.png"
 
 	tNode.set_normal_texture(load(sTex))
+
+func popSquare(inRow, inCol, inNode):
+	for x in range(1, 6):
+		for y in range(1, 6):
+			var sTmp1 = str(inRow) + str(inCol) + str(x) + str(y)
+
+			if tBtns[sTmp1] == "tick":
+				var sNode1 = inNode + str(x + 1) + "/PanelContainer/HBoxContainer/Panel"
+				sNode1 = sNode1 + str(y + 1) + "/btn" + sTmp1
+				setCell(sTmp1, 1, sNode1)
+
+				for z in range(1, 6):
+					if z != x:
+						sTmp1 = str(inRow) + str(inCol) + str(z) + str(y)
+						sNode1 = inNode + str(z + 1) + "/PanelContainer/HBoxContainer/Panel"
+						sNode1 = sNode1 + str(y + 1) + "/btn" + sTmp1
+						setCell(sTmp1, 3, sNode1)
+
+				for z in range(1, 6):
+					if z != y:
+						sTmp1 = str(inRow) + str(inCol) + str(x) + str(z)
+						sNode1 = inNode + str(x + 1) + "/PanelContainer/HBoxContainer/Panel"
+						sNode1 = sNode1 + str(z + 1) + "/btn" + sTmp1
+						setCell(sTmp1, 3, sNode1)
+			elif tBtns[sTmp1] == "cross":
+				sTmp1 = str(inRow) + str(inCol) + str(x) + str(y)
+				var sNode1 = inNode + str(x + 1) + "/PanelContainer/HBoxContainer/Panel"
+				sNode1 = sNode1 + str(y + 1) + "/btn" + sTmp1
+				setCell(sTmp1, 2, sNode1)
+
+func clearSquare(inRow, inCol, inNode):
+	for x in range(1, 6):
+		for y in range(1, 6):
+			var sTmp1 = str(inRow) + str(inCol) + str(x) + str(y)
+			var sNode2 = inNode + str(x + 1) + "/PanelContainer/HBoxContainer/Panel"
+			sNode2 = sNode2 + str(y + 1) + "/btn" + sTmp1
+			var tNode = get_tree().get_root().get_node(sNode2)
+			var sTex = "res://Textures/blank.png"
+			tNode.set_normal_texture(load(sTex))
+
+			if tBtns[sTmp1] == "tcross":
+				tBtns[sTmp1] = "blank"
 
 func onBtn(BRow, BColumn, Row, Column, inEvent):
 	var sTmp = str(BRow) + str(BColumn) + str(Row) + str(Column)
 
 	if inEvent is InputEventMouseButton and inEvent.pressed:
-			var sTmp1 = ""
-			var sNode = "Control/HBoxContainer/Column" + str(BColumn) + "/Square" + str(BRow) + str(BColumn)
-			sNode = sNode + "/HBoxContainer"
-			var sNode1 = sNode + str(Row + 1) + "/PanelContainer/HBoxContainer/Panel"
-			sNode1 = sNode1 + str(Column + 1) + "/btn" + sTmp
-			var bOK = false
-			var R1 = 0
-			var C1 = 0
+		var sTmp1 = ""
+		var sNode = "Control/HBoxContainer/Column" + str(BColumn) + "/Square" + str(BRow) + str(BColumn)
+		sNode = sNode + "/HBoxContainer"
+		var sNode1 = sNode + str(Row + 1) + "/PanelContainer/HBoxContainer/Panel"
+		sNode1 = sNode1 + str(Column + 1) + "/btn" + sTmp
 
-			match inEvent.button_index:
-				BUTTON_LEFT:
-					# left button clicked
-					if tBtns[sTmp] == "tick":
-						pass
-					elif tBtns[sTmp] == "blank":
-						setCell(sTmp, 1, sNode1)
+		match inEvent.button_index:
+			BUTTON_LEFT:
+				# left button clicked
+				clearSquare(BRow, BColumn, sNode)
 
-						for x in range(1, 6):
-							if x != Column:
-								sTmp = str(BRow) + str(BColumn) + str(Row) + str(x)
-								sNode1 = sNode + str(Row + 1) + "/PanelContainer/HBoxContainer/Panel"
-								sNode1 = sNode1 + str(x + 1) + "/btn" + sTmp
-								setCell(sTmp, 2, sNode1)
+				if tBtns[sTmp] == "tick":
+					pass
+				elif tBtns[sTmp] == "cross":
+					setCell(sTmp, 1, sNode1)
+				else:
+					setCell(sTmp, 1, sNode1)
 
-						for x in range(1, 6):
-							if x != Row:
-								sTmp = str(BRow) + str(BColumn) + str(x) + str(Column)
-								sNode1 = sNode + str(x + 1) + "/PanelContainer/HBoxContainer/Panel"
-								sNode1 = sNode1 + str(Column + 1) + "/btn" + sTmp
-								setCell(sTmp, 2, sNode1)
-					else:
-						for x in range(1, 6):
-							sTmp = str(BRow) + str(BColumn) + str(Row) + str(x)
-							
-							if tBtns[sTmp] == "tick":
-								C1 = x
+					for x in range(1, 6):
+						sTmp1 = str(BRow) + str(BColumn) + str(x) + str(Column)
 
-								for y in range(1, 6):
-									bOK = true
+						if x != Row:
+							if tBtns[sTmp1] == "tick":
+								tBtns[sTmp1] = "blank"
 
-									for z in range(1, 6):
-										if y != Row and z != Column:
-											sTmp1 = str(BRow) + str(BColumn) + str(y) + str(z)
+					for x in range(1, 6):
+						sTmp1 = str(BRow) + str(BColumn) + str(Row) + str(x)
 
-											if tBtns[sTmp1] == "tick":
-												bOK = false
+						if x != Column:
+							if tBtns[sTmp1] == "tick":
+								tBtns[sTmp1] = "blank"
 
-									if bOK:
-										sTmp1 = str(BRow) + str(BColumn) + str(y) + str(C1)
-										sNode1 = sNode + str(y + 1) + "/PanelContainer/HBoxContainer/Panel"
-										sNode1 = sNode1 + str(C1 + 1) + "/btn" + sTmp1
-										setCell(sTmp1, 0, sNode1)
+				popSquare(BRow, BColumn, sNode)
+			BUTTON_RIGHT:
+				# right button clicked
+				print("RIGHT: " + str(Row) + ":" + str(Column))
+				if tBtns[sTmp] == "blank":
+					setCell(sTmp, 2, sNode1)
+				elif tBtns[sTmp] == "cross" or tBtns[sTmp] == "tick":
+					setCell(sTmp, 0, sNode1)
+				else:	# tcross
+					for x in range(1, 6):
+						sTmp1 = str(BRow) + str(BColumn) + str(x) + str(Column)
 
-						for x in range(1, 6):
-							sTmp = str(BRow) + str(BColumn) + str(x) + str(Column)
-							
-							if tBtns[sTmp] == "tick":
-								R1 = x
+						if x != Row:
+							if tBtns[sTmp1] == "tick":
+								tBtns[sTmp1] = "blank"
 
-								for y in range(1, 6):
-									bOK = true
+					for x in range(1, 6):
+						sTmp1 = str(BRow) + str(BColumn) + str(Row) + str(x)
 
-									for z in range(1, 6):
-										if y != Row and z != Column:
-											sTmp1 = str(BRow) + str(BColumn) + str(y) + str(z)
+						if x != Column:
+							if tBtns[sTmp1] == "tick":
+								tBtns[sTmp1] = "blank"
 
-											if tBtns[sTmp1] == "tick":
-												bOK = false
-
-									if bOK:
-										sTmp1 = str(BRow) + str(BColumn) + str(R1) + str(y)
-										sNode1 = sNode + str(R1 + 1) + "/PanelContainer/HBoxContainer/Panel"
-										sNode1 = sNode1 + str(y + 1) + "/btn" + sTmp1
-										setCell(sTmp1, 0, sNode1)
-
-						sTmp1 = str(BRow) + str(BColumn) + str(Row) + str(Column)
-						sNode1 = sNode + str(Row + 1) + "/PanelContainer/HBoxContainer/Panel"
-						sNode1 = sNode1 + str(Column + 1) + "/btn" + sTmp1
-						setCell(sTmp1, 1, sNode1)
-
-						for x in range(1, 6):
-							if x != Row:
-								sTmp1 = str(BRow) + str(BColumn) + str(x) + str(Column)
-								sNode1 = sNode + str(x + 1) + "/PanelContainer/HBoxContainer/Panel"
-								sNode1 = sNode1 + str(Column + 1) + "/btn" + sTmp1
-								setCell(sTmp1, 2, sNode1)
-
-						for x in range(1, 6):
-							if x != Column:
-								sTmp1 = str(BRow) + str(BColumn) + str(Row) + str(x)
-								sNode1 = sNode + str(Row + 1) + "/PanelContainer/HBoxContainer/Panel"
-								sNode1 = sNode1 + str(x + 1) + "/btn" + sTmp1
-								setCell(sTmp1, 2, sNode1)
-				BUTTON_RIGHT:
-					# right button clicked
-					if tBtns[sTmp] == "blank":
-						setCell(sTmp, 2, sNode1)
-					elif tBtns[sTmp] == "cross":
-						bOK = true
-
-						for x in range(1, 6):
-							if x != Column:
-								sTmp = str(BRow) + str(BColumn) + str(Row) + str(x)
-
-								if tBtns[sTmp] == "tick":
-									bOK = false
-
-						for x in range(1, 6):
-							if x != Row:
-								sTmp = str(BRow) + str(BColumn) + str(x) + str(Column)
-
-								if tBtns[sTmp] == "tick":
-									bOK = false
-
-						if bOK:
-							setCell(sTmp, 0, sNode1)
-					else:
-						setCell(sTmp, 0, sNode1)
-
-						for x in range(1, 6):
-							bOK = true
-
-							for y in range(1, 6):
-								sTmp = str(BRow) + str(BColumn) + str(x) + str(y)
-			
-								if tBtns[sTmp] == "tick":
-									bOK = false
-
-							if bOK:
-								sTmp1 = str(BRow) + str(BColumn) + str(x) + str(Column)
-								sNode1 = sNode + str(x + 1) + "/PanelContainer/HBoxContainer/Panel"
-								sNode1 = sNode1 + str(Column + 1) + "/btn" + sTmp1
-								setCell(sTmp1, 0, sNode1)
-
-						for x in range(1, 6):
-							bOK = true
-
-							for y in range(1, 6):
-								sTmp = str(BRow) + str(BColumn) + str(y) + str(x)
-			
-								if tBtns[sTmp] == "tick":
-									bOK = false
-
-							if bOK:
-								sTmp1 = str(BRow) + str(BColumn) + str(Row) + str(x)
-								sNode1 = sNode + str(Row + 1) + "/PanelContainer/HBoxContainer/Panel"
-								sNode1 = sNode1 + str(x + 1) + "/btn" + sTmp1
-								setCell(sTmp1, 0, sNode1)
+				clearSquare(BRow, BColumn, sNode)
+				popSquare(BRow, BColumn, sNode)
 
 # Button Presses:
 func _on_btnSupp_pressed():
