@@ -61,18 +61,12 @@ func allReady():
 
 func clearBoard():
 	var sNode = ""
-	var sNodeL = ""
 	var sNode1 = ""
 	var sNode2 = ""
 	var sNode3 = ""
 	var sNode4 = ""
 	var sNode5 = ""
 	var tNode
-	var sX = ""
-	var sY = ""
-	var sTmp = ""
-	var sTmp1 = ""
-	var sTmp2 = ""
 	time_elapsed = 0
 	bTimer = true
 
@@ -127,6 +121,23 @@ func clearBoard():
 			sNode4 = sNode + str(y + 1) + sNode3 + str(x) + str(y)
 			tNode = get_tree().get_root().get_node(sNode4)
 			tNode.set_text("")
+
+	clearButtons()
+
+func clearButtons():
+	# Buttons
+	var sX = ""
+	var sY = ""
+	var sTmp = ""
+	var sTmp1 = ""
+	var sTmp2 = ""
+	var sNode = ""
+	var sNodeL = ""
+	var sNode1 = "Control/HBoxContainer/Column"
+	var sNode2 = "/Square"
+	var sNode3 = "/HBoxContainer"
+	var sNode4 = "/PanelContainer/HBoxContainer/Panel"
+	var tNode
 
 	# Buttons
 	sNode1 = "Control/HBoxContainer/Column"
@@ -253,7 +264,6 @@ func onBtn(BRow, BColumn, Row, Column, inEvent):
 				popSquare(BRow, BColumn, sNode)
 			BUTTON_RIGHT:
 				# right button clicked
-				print("RIGHT: " + str(Row) + ":" + str(Column))
 				if tBtns[sTmp] == "blank":
 					setCell(sTmp, 2, sNode1)
 				elif tBtns[sTmp] == "cross" or tBtns[sTmp] == "tick":
@@ -286,7 +296,7 @@ func _on_btnSupp_pressed():
 
 	Common.clueText = node.get_bbcode() + sTxt
 	node.set_bbcode(Common.clueText)
-	time_elapsed += 30
+	time_elapsed += 120
 	$HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer2/btnSupp.disabled = true
 
 func _on_btnGiveUp_pressed():
@@ -343,6 +353,9 @@ func _on_btnCheck_pressed():
 
 		updateDlg("Not this time!", sT, 2, false, false, true)
 		bTimer = true
+
+func _on_btnClear_pressed():
+	clearButtons()
 
 func _on_btnQuit_pressed():
 	updateDlg("Are you sure?", "Are you sure you want to exit the game?", 1, true, true, false)

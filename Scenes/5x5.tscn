@@ -8226,20 +8226,20 @@ custom_styles/normal = SubResource( 7 )
 
 [node name="Label" type="Label" parent="HBoxContainer"]
 margin_left = 892.0
-margin_right = 976.0
+margin_right = 943.0
 margin_bottom = 1050.0
 rect_min_size = Vector2( 25, 0 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="CluesAndButtons" type="VBoxContainer" parent="HBoxContainer"]
-margin_left = 980.0
+margin_left = 947.0
 margin_right = 1680.0
 margin_bottom = 1050.0
 size_flags_horizontal = 3
 
 [node name="Clues" type="RichTextLabel" parent="HBoxContainer/CluesAndButtons"]
-margin_right = 700.0
+margin_right = 733.0
 margin_bottom = 705.0
 rect_min_size = Vector2( 700, 0 )
 size_flags_horizontal = 3
@@ -8261,7 +8261,7 @@ text = " CLUES:
 
 [node name="Time" type="RichTextLabel" parent="HBoxContainer/CluesAndButtons"]
 margin_top = 709.0
-margin_right = 700.0
+margin_right = 733.0
 margin_bottom = 759.0
 rect_min_size = Vector2( 0, 50 )
 custom_fonts/normal_font = ExtResource( 6 )
@@ -8272,92 +8272,109 @@ custom_effects = [ SubResource( 11 ) ]
 
 [node name="Buttons" type="HBoxContainer" parent="HBoxContainer/CluesAndButtons"]
 margin_top = 763.0
-margin_right = 700.0
+margin_right = 733.0
 margin_bottom = 1050.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/CluesAndButtons/Buttons"]
-margin_right = 700.0
+margin_right = 733.0
 margin_bottom = 287.0
 size_flags_horizontal = 3
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer"]
-margin_right = 700.0
+margin_right = 733.0
 margin_bottom = 100.0
 
 [node name="Label" type="Label" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer2"]
 margin_top = 43.0
-margin_right = 61.0
+margin_right = 72.0
 margin_bottom = 57.0
 size_flags_horizontal = 3
 
 [node name="btnSupp" type="Button" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer2"]
-margin_left = 65.0
-margin_right = 315.0
+margin_left = 76.0
+margin_right = 326.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 250, 100 )
 custom_fonts/font = ExtResource( 3 )
 text = "MORE CLUES"
 
 [node name="Label2" type="Label" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer2"]
-margin_left = 319.0
-margin_right = 380.0
+margin_left = 330.0
+margin_right = 402.0
 margin_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
 
 [node name="btnGiveUp" type="Button" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer2"]
-margin_left = 384.0
-margin_right = 634.0
+margin_left = 406.0
+margin_right = 656.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 250, 100 )
 custom_fonts/font = ExtResource( 3 )
 text = "I GIVE UP!"
 
 [node name="Label3" type="Label" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer2"]
-margin_left = 638.0
-margin_right = 700.0
+margin_left = 660.0
+margin_right = 733.0
 margin_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
 
 [node name="Label3" type="Label" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer"]
 margin_top = 104.0
-margin_right = 700.0
+margin_right = 733.0
 margin_bottom = 129.0
 rect_min_size = Vector2( 0, 25 )
 size_flags_horizontal = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer"]
 margin_top = 133.0
-margin_right = 700.0
+margin_right = 733.0
 margin_bottom = 233.0
 
 [node name="btnCheck" type="Button" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer"]
-margin_right = 250.0
+margin_right = 228.0
 margin_bottom = 100.0
-rect_min_size = Vector2( 250, 100 )
+rect_min_size = Vector2( 200, 100 )
 custom_fonts/font = ExtResource( 3 )
 text = "CHECK GRID"
 
 [node name="Label" type="Label" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer"]
-margin_left = 254.0
-margin_right = 446.0
+margin_left = 232.0
+margin_right = 257.0
 margin_bottom = 100.0
+rect_min_size = Vector2( 25, 0 )
+size_flags_horizontal = 3
+size_flags_vertical = 7
+
+[node name="btnClear" type="Button" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer"]
+margin_left = 261.0
+margin_right = 484.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 100 )
+custom_fonts/font = ExtResource( 3 )
+text = "CLEAR GRID"
+
+[node name="Label2" type="Label" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer"]
+margin_left = 488.0
+margin_right = 513.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 25, 0 )
 size_flags_horizontal = 3
 size_flags_vertical = 7
 
 [node name="btnQuit" type="Button" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer"]
-margin_left = 450.0
-margin_right = 700.0
+margin_left = 517.0
+margin_right = 733.0
 margin_bottom = 100.0
-rect_min_size = Vector2( 250, 100 )
+rect_min_size = Vector2( 200, 100 )
 custom_fonts/font = ExtResource( 3 )
 toggle_mode = true
 text = "QUIT GAME"
 
 [node name="Label4" type="Label" parent="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer"]
 margin_top = 237.0
-margin_right = 700.0
+margin_right = 733.0
 margin_bottom = 287.0
 rect_min_size = Vector2( 0, 50 )
 size_flags_horizontal = 3
@@ -8840,6 +8857,7 @@ text = "NO"
 [connection signal="pressed" from="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer2/btnSupp" to="." method="_on_btnSupp_pressed"]
 [connection signal="pressed" from="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer2/btnGiveUp" to="." method="_on_btnGiveUp_pressed"]
 [connection signal="pressed" from="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer/btnCheck" to="." method="_on_btnCheck_pressed"]
+[connection signal="pressed" from="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer/btnClear" to="." method="_on_btnClear_pressed"]
 [connection signal="pressed" from="HBoxContainer/CluesAndButtons/Buttons/VBoxContainer/HBoxContainer/btnQuit" to="." method="_on_btnQuit_pressed"]
 [connection signal="pressed" from="dlgCheck/VBoxContainer/HBoxContainer/btnYes" to="." method="_on_btnYes_pressed"]
 [connection signal="pressed" from="dlgCheck/VBoxContainer/HBoxContainer/btnOK" to="." method="_on_btnOK_pressed"]
